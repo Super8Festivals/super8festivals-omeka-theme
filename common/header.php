@@ -60,25 +60,25 @@
             array(
                 'title' => 'Home',
                 'href' => '/',
-                'active' => true,
+                'active' => current_url() == '/',
             ),
             // About
             array(
                 'title' => 'About',
                 'href' => '/about',
-                'active' => false,
+                'active' => current_url() == '/about',
             ),
             // Contact
             array(
                 'title' => 'Contact',
                 'href' => '/contact',
-                'active' => false,
+                'active' => current_url() == '/contact',
             ),
             // Submit
             array(
                 'title' => 'Submit',
                 'href' => '/submit',
-                'active' => false,
+                'active' => current_url() == '/submit',
             ),
         )
     )); ?>
