@@ -1,0 +1,94 @@
+@import "_globals.scss";
+@import "_helpful.scss";
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .nav-top {
+    background-color: $KodachromeBoxBG;
+    border-bottom: 15px solid $KodachromeBoxBG;
+
+    .headers {
+      padding: 0.75em 0;
+
+      h1 {
+        margin: 0;
+
+        .logo {
+          width: 400px;
+        }
+      }
+
+      .search {
+        background-color: $KodachromeBoxBGDarker;
+        border: none;
+        border-radius: 5px;
+        color: #ffffff;
+
+        .input-group-text {
+          background: none;
+          border: none;
+          padding: 0.5em;
+          height: 100%;
+        }
+
+        input {
+          background: none;
+          border: none;
+          padding: 0.5em;
+          height: 100%;
+        }
+      }
+    }
+
+    .links {
+      background-color: $KodachromeBoxBanner;
+      display: flex;
+      justify-content: center;
+
+      .nav-item {
+        margin: 0 2em;
+
+        .nav-link {
+          color: #ffffff;
+          text-decoration: none;
+          border: none;
+        }
+
+        .active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+section {
+  margin-top: 132px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  background-color: $KodachromeBoxBG;
+
+  a {
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .icons {
+    .nav-item {
+      font-size: 2em;
+    }
+  }
+}
+
+.map {
+  height: 660px;
+  width: 100%;
+}
