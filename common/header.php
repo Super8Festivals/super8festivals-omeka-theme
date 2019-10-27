@@ -54,6 +54,8 @@
 <header role="banner">
     <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
     <?php echo $this->partial('_partials/nav-top.php', array(
+        'searchPlaceholderText' => '',
+        'searchButtonText' => 'Search',
         'items' => array(
             // Home
             array(

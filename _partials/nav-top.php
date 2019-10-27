@@ -11,10 +11,13 @@
             <!-- Search -->
             <div class="col vertical-align">
                 <div class="input-group search">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="la la-search"></i></span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+                    <form id="search-form" name="search-form" action="search" method="get">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="la la-search"></i></span>
+                        </div>
+                        <input name="query" id="query" value type="text" class="form-control" placeholder="<?php echo $searchPlaceholderText; ?>" aria-label="Search" aria-describedby="basic-addon1">
+                        <button name="submit_search" id="submit_search" type="submit" value="Search"><?php echo $searchButtonText; ?></button>
+                    </form>
                 </div>
             </div>
         </div>

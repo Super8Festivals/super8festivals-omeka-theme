@@ -27,19 +27,33 @@ header {
         border-radius: 5px;
         color: #ffffff;
 
-        .input-group-text {
-          background: none;
-          border: none;
-          padding: 0.5em;
-          height: 100%;
+        form {
+          display: flex;
+          width: 100%;
+
+          .input-group-text {
+            background-color: $KodachromeBoxBGDarker;
+            border: none;
+            padding: 0.5em;
+            height: 100%;
+          }
+
+          input {
+            background: none;
+            border: none;
+            padding: 0.5em;
+            height: 100%;
+          }
+
+          button {
+            background-color: $KodachromeBoxBGDarkest;
+            width: 200px;
+            border: none;
+            padding: 0.5em;
+            height: 100%;
+          }
         }
 
-        input {
-          background: none;
-          border: none;
-          padding: 0.5em;
-          height: 100%;
-        }
       }
     }
 
