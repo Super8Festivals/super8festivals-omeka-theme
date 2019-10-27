@@ -31,9 +31,9 @@
     // -- END BOOTSTRAP --
 
     // line awesome provides our icons
-    queue_css_file('line-awesome.min');
+    queue_css_file('line-awesome.min', 'line-awesome-font-awesome.min');
 
-    // our main stylesheet
+    // our stylesheet
     queue_css_file('style');
 
     echo head_css();
@@ -56,7 +56,35 @@
 
 <header role="banner">
     <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
-    <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
+    <?php echo $this->partial('_partials/nav-top.php', array(
+        'items' => array(
+            // Home
+            array(
+                'title' => 'Home',
+                'href' => '/',
+                'active' => true,
+            ),
+            // About
+            array(
+                'title' => 'About',
+                'href' => '/about',
+                'active' => false,
+            ),
+            // Contact
+            array(
+                'title' => 'Contact',
+                'href' => '/contact',
+                'active' => false,
+            ),
+            // Submit
+            array(
+                'title' => 'Submit',
+                'href' => '/submit',
+                'active' => false,
+            ),
+        )
+    )); ?>
+
 </header>
 
 <div id="wrap">
