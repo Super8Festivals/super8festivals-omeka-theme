@@ -16,13 +16,10 @@
     ?>
     <title><?php echo implode(' &middot; ', $titleParts); ?></title>
 
-
     <?php echo auto_discovery_link_tags(); ?>
 
     <!-- Plugin Stuff -->
-
     <?php fire_plugin_hook('public_head', array('view' => $this)); ?>
-
 
     <!-- Stylesheets -->
     <?php
@@ -31,7 +28,7 @@
     // -- END BOOTSTRAP --
 
     // line awesome provides our icons
-    queue_css_file('line-awesome.min', 'line-awesome-font-awesome.min');
+    queue_css_file(array('line-awesome.min', 'line-awesome-font-awesome.min'));
 
     // our stylesheet
     queue_css_file('style');
