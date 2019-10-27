@@ -1,4 +1,6 @@
-<?php echo head(array()); ?>
+<?php echo head(array(
+    'title' => 'Home'
+)); ?>
 
 
 <p>This is the homepage.</p>
