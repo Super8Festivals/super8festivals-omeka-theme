@@ -1,11 +1,12 @@
 @import "_globals.scss";
 @import "_helpful.scss";
 
-header {
-  position: absolute;
-  top: 0;
-  width: 100%;
+body {
+  display: flex;
+  flex-direction: column;
+}
 
+header {
   .nav-top {
     background-color: $KodachromeBoxBG;
     border-bottom: 15px solid $KodachromeBoxBG;
