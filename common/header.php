@@ -2,7 +2,7 @@
 <html lang="<?php echo get_html_lang(); ?>">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <?php if ($description = option('description')): ?>
         <meta name="description" content="<?php echo $description; ?>"/>
@@ -26,21 +26,27 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css_file(array('iconfonts', 'style'));
-    queue_css_url('//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic');
-    echo head_css();
+    // -- START BOOTSTRAP --
+    queue_css_url('//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+    // -- END BOOTSTRAP --
 
-    echo theme_header_background();
+    // line awesome provides our icons
+    queue_css_file('line-awesome.min');
+
+    // our main stylesheet
+    queue_css_file('style');
+
+    echo head_css();
     ?>
 
     <!-- JavaScripts -->
     <?php
-    queue_js_file('vendor/modernizr');
-    queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)'));
-    queue_js_file('vendor/respond');
-    queue_js_file('vendor/jquery-accessibleMegaMenu');
-    queue_js_file('globals');
-    queue_js_file('default');
+    // -- START BOOTSTRAP --
+    queue_js_url("https://code.jquery.com/jquery-3.3.1.slim.min.js");
+    queue_js_url("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js");
+    queue_js_url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js");
+    // -- END BOOTSTRAP --
+
     echo head_js();
     ?>
 </head>
