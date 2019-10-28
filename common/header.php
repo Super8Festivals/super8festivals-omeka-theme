@@ -30,6 +30,10 @@
     // line awesome provides our icons
     queue_css_file(array('line-awesome.min', 'line-awesome-font-awesome.min'));
 
+    // -- START OPEN LAYERS MAP --
+    queue_css_url('//cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css');
+    // -- END OPEN LAYERS MAP --
+
     // our stylesheet
     queue_css_file('style');
 
@@ -44,6 +48,10 @@
     queue_js_url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js");
     // -- END BOOTSTRAP --
 
+    // -- START OPEN LAYERS MAP --
+    queue_js_url('//cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/build/ol.js');
+    // -- END OPEN LAYERS MAP --
+
     echo head_js();
     ?>
 </head>
@@ -52,35 +60,29 @@
 
 <header role="banner">
     <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
-    <?php echo $this->partial('_partials/nav-top.php', array(
+    <?php
+
+    $navItems = array(
+        // Home
+        array(
+            'title' => 'Home',
+            'href' => '/',
+            'active' => current_url() == '/',
+        ),
+    );
+    $simplePagesLinks = simple_pages_get_links_for_children_pages(0);
+    foreach ($simplePagesLinks as $link) {
+        array_push($navItems, array(
+            'title' => $link['label'],
+            'href' => $link['uri'],
+            'active' => current_url() == $link['uri'],
+        ));
+    }
+
+    echo $this->partial('_partials/nav-top.php', array(
         'searchPlaceholderText' => '',
         'searchButtonText' => 'Search',
-        'items' => array(
-            // Home
-            array(
-                'title' => 'Home',
-                'href' => '/',
-                'active' => current_url() == '/',
-            ),
-            // About
-            array(
-                'title' => 'About',
-                'href' => '/about',
-                'active' => current_url() == '/about',
-            ),
-            // Contact
-            array(
-                'title' => 'Contact',
-                'href' => '/contact',
-                'active' => current_url() == '/contact',
-            ),
-            // Submit
-            array(
-                'title' => 'Submit',
-                'href' => '/submit',
-                'active' => current_url() == '/submit',
-            ),
-        )
+        'items' => $navItems,
     )); ?>
 
 </header>
