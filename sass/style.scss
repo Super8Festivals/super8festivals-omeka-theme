@@ -7,16 +7,19 @@ body {
 }
 
 header {
+  height: 130px;
+  z-index: 999;
   .nav-top {
     background-color: $KodachromeBoxBG;
     border-bottom: 15px solid $KodachromeBoxBG;
+    height: 100%;
 
     .headers {
-      padding: 0.75em 0;
+      padding-bottom: 0.5em;
 
       h1 {
         margin: 0;
-
+        padding: 0.25em 0;
         .logo {
           width: 400px;
         }

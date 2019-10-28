@@ -3,13 +3,13 @@
         <!-- Row 1 -->
         <div class="row">
             <!-- Title -->
-            <div class="col vertical-align">
+            <div class="col vertical-align horizontal-align">
                 <h1 class="nav-brand">
                     <img src="<?php echo src('logo.png', 'images/'); ?>" class="logo" alt="Super 8 Festivals">
                 </h1>
             </div>
             <!-- Search -->
-            <div class="col vertical-align">
+            <div class="col vertical-align horizontal-align">
                 <div class="input-group search">
                     <form id="search-form" name="search-form" action="search" method="get">
                         <div class="input-group-prepend">
