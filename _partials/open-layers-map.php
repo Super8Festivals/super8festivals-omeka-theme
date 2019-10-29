@@ -22,14 +22,6 @@
     }));
     <?php endforeach; ?>
 
-
-    //markers.push(new ol.Feature({
-    //    geometry: new ol.geom.Point(
-    //        ol.proj.fromLonLat([east, north, west south]),
-    //    ),
-    //    name: "<?php //echo $name; ?>//",
-    //}));
-
     let layers = [];
     // source layer
     layers.push(
