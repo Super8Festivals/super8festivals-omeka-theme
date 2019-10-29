@@ -12,4 +12,8 @@ echo $this->partial("_partials/open-layers-map.php", array(
 ));
 ?>
 
+
+<div style="position: absolute; z-index: 9999; left: 0; bottom: 0; color: red;">
+</div>
+
 <?php echo foot(); ?>

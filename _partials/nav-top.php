@@ -23,17 +23,9 @@
         </div>
     </div>
     <div class="container-fluid links">
-        <!-- Row 1 -->
         <div class="row">
-            <!-- Title -->
             <div class="col">
-                <ul class="nav">
-                    <?php foreach ($items as $item): ?>
-                        <li class="nav-item">
-                            <a class="nav-link <?php echo $item['active'] ? "active" : "" ?>" href="<?php echo $item['href'] ?>"><?php echo $item['title']; ?></a>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
+                <?php echo public_nav_main(); ?>
             </div>
         </div>
     </div>
