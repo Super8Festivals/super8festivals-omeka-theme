@@ -46,15 +46,14 @@
 
     // view
     let view = new ol.View({
-        center: ol.proj.fromLonLat([10, 10]),
+        center: ol.proj.fromLonLat([10, -5]),
         zoom: 0
     });
 
     const map = new ol.Map({
         target: '<?php echo $mapID; ?>',
         layers: layers,
-        view: view,
+        view: view
     });
-
 
 </script>
