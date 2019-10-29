@@ -5,7 +5,9 @@
             <!-- Title -->
             <div class="col vertical-align horizontal-align">
                 <h1 class="nav-brand">
-                    <img src="<?php echo src('logo.png', 'images/'); ?>" class="logo" alt="Super 8 Festivals">
+                    <a href="/">
+                        <img src="<?php echo src('logo.png', 'images/'); ?>" class="logo" alt="Super 8 Festivals">
+                    </a>
                 </h1>
             </div>
             <!-- Search -->
