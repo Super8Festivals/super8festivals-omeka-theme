@@ -47,11 +47,6 @@
     queue_js_url("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js");
     queue_js_url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js");
     // -- END BOOTSTRAP --
-
-    // -- START OPEN LAYERS MAP --
-    queue_js_url('//cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/build/ol.js');
-    // -- END OPEN LAYERS MAP --
-
     echo head_js();
     ?>
 </head>
