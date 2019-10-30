@@ -38,8 +38,9 @@ header
 
   .nav-top
   {
-    background-color : $KodachromeBoxBG;
-    padding-top      : 10px;
+    background  : $KodachromeBoxBG $NoiseImage;
+
+    padding-top : 10px;
     //padding-bottom   : 10px;
     //border-top    : 10px solid $KodachromeBoxBG;
     //border-bottom    : 10px solid $KodachromeBoxBG;
@@ -52,7 +53,7 @@ header
 
     .banner-bg
     {
-      background-color : $KodachromeBoxBanner;
+      background : $KodachromeBoxBanner $NoiseImage;
     }
 
     h1.nav-brand
@@ -128,7 +129,7 @@ header
 
     .links
     {
-      padding        : 0.5em 0;
+      padding        : 0.25em 0;
       text-transform : uppercase;
       font-family    : "Staatliches", sans-serif;
       font-size      : 1.4em;
@@ -144,8 +145,8 @@ header
 
         li
         {
-          display   : inline-block;
-          padding   : 0 1.25em;
+          display : inline-block;
+          padding : 0 1.25em;
 
           a
           {
@@ -178,9 +179,9 @@ header
 
 footer
 {
-  display          : flex;
-  flex-direction   : row;
-  background-color : $KodachromeBoxBG;
+  display        : flex;
+  flex-direction : row;
+  background     : $KodachromeBoxBG $NoiseImage;
 
   a
   {
@@ -229,6 +230,6 @@ html, body, .map
 
 .map
 {
-  background-color : $KodachromeBoxBG;
-  //padding : 0 1em;
+  background : $KodachromeBoxBG $NoiseImage;
 }
+
