@@ -210,14 +210,13 @@ footer
   {
     padding        : 1em 0;
     text-transform : uppercase;
-    //font-weight: bold;
   }
 }
 
 main.container-fluid
 {
-  padding          : 0;
-  background-color : $KodachromeBoxBG;
+  //padding          : 0;
+  background : $KodachromeBoxBG $NoiseImage;
 }
 
 html, body, .map
