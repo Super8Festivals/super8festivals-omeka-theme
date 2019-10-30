@@ -2,50 +2,30 @@
 
 
 <footer role="contentinfo">
-    <div class="container">
+    <div class="container-fluid">
         <!-- Social Icons Row -->
         <div class="row">
-            <div class="col">
-                <ul class="nav icons horizontal-align">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span><i class="fa fa-facebook"></i></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span><i class="fa fa-instagram"></i></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span><i class="fa fa-twitter"></i></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><span><i class="fa fa-youtube"></i></span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="la la-envelope"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- Links Row -->
-        <!--        <div class="row">-->
-        <!--            <div class="col">-->
-        <!--                <ul class="nav links horizontal-align">-->
-        <!--                    <li class="nav-item">-->
-        <!--                        <a class="nav-link active" href="#">Home</a>-->
-        <!--                    </li>-->
-        <!--                    <li class="nav-item">-->
-        <!--                        <a class="nav-link active" href="#">About</a>-->
-        <!--                    </li>-->
-        <!--                    <li class="nav-item">-->
-        <!--                        <a class="nav-link active" href="#">Contact</a>-->
-        <!--                    </li>-->
-        <!--                    <li class="nav-item">-->
-        <!--                        <a class="nav-link active" href="#">Submit</a>-->
-        <!--                    </li>-->
-        <!--                </ul>-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <div class="row">
-            <div class="col horizontal-align">
+            <!--            <div class="col horizontal-align vertical-align">-->
+            <!--                <ul class="nav icons horizontal-align">-->
+            <!--                    <li class="nav-item">-->
+            <!--                        <a class="nav-link" href="#"><span><i class="fa fa-facebook"></i></span></a>-->
+            <!--                    </li>-->
+            <!--                    <li class="nav-item">-->
+            <!--                        <a class="nav-link" href="#"><span><i class="fa fa-instagram"></i></span></a>-->
+            <!--                    </li>-->
+            <!--                    <li class="nav-item">-->
+            <!--                        <a class="nav-link" href="#"><span><i class="fa fa-twitter"></i></span></a>-->
+            <!--                    </li>-->
+            <!--                    <li class="nav-item">-->
+            <!--                        <a class="nav-link" href="#"><span><i class="fa fa-youtube"></i></span></a>-->
+            <!--                    </li>-->
+            <!--                    <li class="nav-item">-->
+            <!--                        <a class="nav-link" href="#"><i class="la la-envelope"></i></a>-->
+            <!--                    </li>-->
+            <!--                </ul>-->
+            <!--            </div>-->
+            <!--Copyright-->
+            <div class="col copyright horizontal-align vertical-align">
                 <p>Copyright © Super 8 Festivals 2019</p>
             </div>
         </div>

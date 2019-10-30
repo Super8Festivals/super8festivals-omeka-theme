@@ -6,81 +6,133 @@ body
   display        : flex;
   flex-direction : column;
   min-height     : 100vh;
+  font-family    : 'Roboto', sans-serif;
+  //font-family    : 'Roboto Mono', monospace;
+  //font-family    : 'Playfair Display', serif;
 }
 
 header
 {
   z-index : 999;
 
+  .cartridge-notice
+  {
+    p
+    {
+      height : 50px;
+      margin : 0;
+
+      span:first-child
+      {
+        color : red; font-weight : bold; font-size : 4em;
+      }
+
+      span:not(:first-child)
+      {
+        font-style   : italic;
+        font-weight  : bold;
+        padding-left : 0.5em;
+      }
+    }
+  }
+
   .nav-top
   {
     background-color : $KodachromeBoxBG;
-    border-bottom    : 15px solid $KodachromeBoxBG;
-    height           : 130px;
+    padding-top      : 10px;
+    //padding-bottom   : 10px;
+    //border-top    : 10px solid $KodachromeBoxBG;
+    //border-bottom    : 10px solid $KodachromeBoxBG;
+    //height           : 130px;
 
-    .headers
+    .row
     {
-      padding-bottom : 0.5em;
+      padding : 0.25em 0;
+    }
 
-      h1
+    .banner-bg
+    {
+      background-color : $KodachromeBoxBanner;
+    }
+
+    h1.nav-brand
+    {
+      margin  : 0;
+      padding : 0.25em 0;
+
+      .logo
       {
-        margin  : 0;
-        padding : 0.25em 0;
-
-        .logo
-        {
-          width : 400px;
-        }
-      }
-
-      .search
-      {
-        background-color : $KodachromeBoxBGDarker;
-        border           : none;
-        border-radius    : 5px;
-        color            : #FFFFFF;
-
-        form
-        {
-          display : flex;
-          width   : 100%;
-
-          .input-group-text
-          {
-            background-color : $KodachromeBoxBGDarker;
-            border           : none;
-            padding          : 0.5em;
-            height           : 100%;
-          }
-
-          input
-          {
-            background : none;
-            border     : none;
-            padding    : 0.5em;
-            height     : 100%;
-          }
-
-          button
-          {
-            background-color : $KodachromeBoxBGDarkest;
-            width            : 200px;
-            border           : none;
-            padding          : 0.5em;
-            height           : 100%;
-          }
-        }
-
+        width : 400px;
       }
     }
 
-    // START NAVIGATION LINKS
+
+    .search
+    {
+      //background-color : darken($KodachromeBoxBanner, 10%);
+      background    : none;
+      border-bottom : 1px dashed black;
+      //border           : none;
+      //border-radius    : 5px;
+      color         : #FFFFFF;
+
+      //background-color : $KodachromeBoxBG;
+      transition    : 0.2s ease-in-out;
+
+      &:hover, &:focus-within
+      {
+        transition       : 0.2s ease-in-out;
+        background-color : darken($KodachromeBoxBG, 5%);
+        outline          : none;
+      }
+
+      form
+      {
+        display : flex;
+        width   : 100%;
+
+        .input-group-text
+        {
+          //background-color : darken($KodachromeBoxBanner, 13%);
+          background : none;
+          border     : none;
+          padding    : 0.5em;
+          height     : 100%;
+          color      : black;
+        }
+
+        input
+        {
+
+          background : none;
+          border     : none;
+          padding    : 0.5em;
+          height     : 100%;
+        }
+
+        button
+        {
+          //background-color : darken($KodachromeBoxBanner, 13%);
+          background     : none;
+          //width            : 200px;
+          border         : none;
+          padding        : 0.75em 2em;
+          height         : 100%;
+          text-transform : lowercase !important;
+          font-weight    : bold;
+          font-style     : italic;
+          //border         : 1px dashed red;
+        }
+      }
+    }
+
     .links
     {
-      background-color : $KodachromeBoxBanner;
-      padding          : 0.5em 0;
-      display          : flex;
-      justify-content  : center;
+      padding        : 0.5em 0;
+      text-transform : uppercase;
+      font-family    : "Staatliches", sans-serif;
+      font-size      : 1.4em;
+      letter-spacing : 0.1em;
 
       ul.navigation
       {
@@ -93,33 +145,32 @@ header
         li
         {
           display   : inline-block;
-          font-size : 1.15em;
           padding   : 0 1.25em;
 
           a
           {
-            color      : white;
-            padding    : 1em;
+            color           : black;
+            padding         : 1em;
 
-            transition : 0.1s ease-in-out;
+            transition      : 0.1s ease-in-out;
+            text-decoration : none;
 
             &:hover
             {
-              color           : black;
-              transition      : 0.1s ease-in-out;
-              text-decoration : none;
+              color                 : black;
+              transition            : 0.1s ease-in-out;
+              text-decoration       : underline;
+              text-decoration-style : dashed;
             }
           }
         }
 
         li.active
         {
-          font-weight : bold;
+          //font-weight : bold;
         }
       }
     }
-
-    // END NAVIGATION LINKS
 
 
   }
@@ -127,6 +178,8 @@ header
 
 footer
 {
+  display          : flex;
+  flex-direction   : row;
   background-color : $KodachromeBoxBG;
 
   a
@@ -142,11 +195,28 @@ footer
       font-size : 2em;
     }
   }
+
+  p
+  {
+    margin         : 0;
+    //font-weight: bold;
+    font-family    : "Staatliches", sans-serif;
+    letter-spacing : 3px;
+    font-size      : 1em;
+  }
+
+  .copyright
+  {
+    padding        : 1em 0;
+    text-transform : uppercase;
+    //font-weight: bold;
+  }
 }
 
 main.container-fluid
 {
-  padding : 0;
+  padding          : 0;
+  background-color : $KodachromeBoxBG;
 }
 
 html, body, .map
@@ -155,4 +225,10 @@ html, body, .map
   padding : 0;
   width   : 100%;
   height  : 100%;
+}
+
+.map
+{
+  background-color : $KodachromeBoxBG;
+  //padding : 0 1em;
 }
