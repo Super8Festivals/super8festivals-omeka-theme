@@ -222,6 +222,16 @@ main.container-fluid
 {
   //padding          : 0;
   background : $KodachromeBoxBG $NoiseImage;
+
+  section
+  {
+    h2.section-title
+    {
+      @extend %horizontal-align;
+    }
+
+    margin-top : 50px;
+  }
 }
 
 html, body, .map

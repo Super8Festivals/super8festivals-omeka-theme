@@ -4,7 +4,19 @@
   align-items : center;
 }
 
+%vertical-align
+{
+  display     : flex;
+  align-items : center;
+}
+
 .horizontal-align
+{
+  display         : flex;
+  justify-content : center;
+}
+
+%horizontal-align
 {
   display         : flex;
   justify-content : center;
