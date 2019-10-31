@@ -1,6 +1,3 @@
-<div id="<?php echo $mapID; ?>" class="map">
-</div>
-
 <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.0/build/ol.js"></script>
 <script type="text/javascript">
 
