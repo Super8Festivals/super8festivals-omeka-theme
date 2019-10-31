@@ -75,21 +75,16 @@ header
 
     .search
     {
-      //background-color : darken($KodachromeBoxBanner, 10%);
-      background    : none;
+      background    : $KodachromeBoxBG $NoiseImage;
       border-bottom : 1px dashed black;
-      //border           : none;
-      //border-radius    : 5px;
       color         : #FFFFFF;
 
-      //background-color : $KodachromeBoxBG;
       transition    : 0.2s ease-in-out;
 
       &:hover, &:focus-within
       {
-        transition       : 0.2s ease-in-out;
-        background-color : darken($KodachromeBoxBG, 5%);
-        outline          : none;
+        transition : 0.2s ease-in-out;
+        background : darken($KodachromeBoxBG, 5%) $NoiseImage;
       }
 
       form
