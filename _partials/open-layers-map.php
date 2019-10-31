@@ -43,7 +43,7 @@
 
     // view
     let view = new ol.View({
-        center: ol.proj.fromLonLat([10, -5]),
+        center: ol.proj.fromLonLat([10, 5]),
         zoom: 0
     });
 
