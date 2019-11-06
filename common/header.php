@@ -69,13 +69,16 @@
             'active' => current_url() == '/',
         ),
     );
-    $simplePagesLinks = simple_pages_get_links_for_children_pages(0);
-    foreach ($simplePagesLinks as $link) {
-        array_push($navItems, array(
-            'title' => $link['label'],
-            'href' => $link['uri'],
-            'active' => current_url() == $link['uri'],
-        ));
+
+    if (plugin_is_active(('SimplePages'))) {
+        $simplePagesLinks = simple_pages_get_links_for_children_pages(0);
+        foreach ($simplePagesLinks as $link) {
+            array_push($navItems, array(
+                'title' => $link['label'],
+                'href' => $link['uri'],
+                'active' => current_url() == $link['uri'],
+            ));
+        }
     }
 
     echo $this->partial('_partials/nav-top.php', array(
