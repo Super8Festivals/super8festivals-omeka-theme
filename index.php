@@ -3,49 +3,54 @@
 )); ?>
 
 <?php
-$mapID = "map"
+$mapID = "map";
+$isPluginActive = plugin_is_active("SuperEightFestivals");
 ?>
 
-<div class="map-area">
-    <div class="row">
-        <div class="col-sm-2 horizontal-align vertical-align">
-            <div class="map-sidebar">
-                <ul>
-                    <li>
-                        <a href="/countries">
-                            <div class="cartridge-box">
-                                <span class="box-title">Countries</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/filmmakers">
-                            <div class="cartridge-box">
-                                <span class="box-title">Filmmakers</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+
+
+<?php if (!$isPluginActive): ?>
+
+
+<?php else: ?>
+    <div class="map-area">
+        <div class="row">
+            <div class="col-sm-2 horizontal-align vertical-align">
+                <div class="map-sidebar">
+                    <ul>
+                        <li>
+                            <a href="/countries">
+                                <div class="cartridge-box">
+                                    <span class="box-title">Countries</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/filmmakers">
+                                <div class="cartridge-box">
+                                    <span class="box-title">Filmmakers</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="col">
-            <div id="<?php echo $mapID; ?>" class="map">
+            <div class="col">
+                <div id="<?php echo $mapID; ?>" class="map">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<?php
-$records = get_records('SuperEightFestivalsCountry', array(), -1);
+    <?php
+    $records = get_records('SuperEightFestivalsCountry', array(), -1);
 
-echo $this->partial("_partials/open-layers-map.php", array(
-    'records' => $records,
-    'mapID' => $mapID,
-));
-?>
+    echo $this->partial("_partials/open-layers-map.php", array(
+        'records' => $records,
+        'mapID' => $mapID,
+    ));
+    ?>
 
-
-<div style="position: absolute; z-index: 9999; left: 0; bottom: 0; color: red;">
-</div>
+<? endif; ?>
 
 <?php echo foot(); ?>

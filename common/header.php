@@ -86,5 +86,12 @@
 
 </header>
 
+<!--Make sure plugin is installed-->
+<div style="position: absolute; bottom: 50%; background: rgba(0,0,0,0.5); z-index: 9999; display: flex; justify-items: center; width: 100%;">
+    <?php if (!plugin_is_active("SuperEightFestivals")): ?>
+        <p style="font-weight: bold; color: red; font-size: 3em; width: 100%;" class="horizontal-align">The Super8Festivals Plugin must be installed for the theme to work correctly</p>
+    <?php endif; ?>
+</div>
+
 <main id="wrap" class="container-fluid flex-fill">
-        <?php fire_plugin_hook('public_content_top', array('view' => $this)); ?>
+    <?php fire_plugin_hook('public_content_top', array('view' => $this)); ?>
