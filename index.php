@@ -32,6 +32,22 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
                                 </div>
                             </a>
                         </li>
+                        <li>
+                            <a href="/federation">
+                                <div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="<?= img('FederationLogo.png', 'images') ?>" alt="" width="145"/>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col horizontal-align">
+                                            <span>Federation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
