@@ -51,6 +51,6 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
     ));
     ?>
 
-<? endif; ?>
+<?php endif; ?>
 
 <?php echo foot(); ?>
