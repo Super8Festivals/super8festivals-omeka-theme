@@ -3,190 +3,26 @@
 )); ?>
 
 <?php
-$mapID = "map";
 $isPluginActive = plugin_is_active("SuperEightFestivals");
 ?>
 
+<!--Navbar-->
 <?php echo $this->partial('_partials/nav-top.php'); ?>
 
 <!--Box-->
-<section class="super8-box" id="box" next="#world">
-    <div class="container-fluid">
-        <!--Cartridge Dimensions-->
-        <div class="row no-gutters" style="padding: 1em 0;">
-            <div class="col">
-                <div class="cartridge-dimensions">
-                    <span>15 m &bullet; 50 ft</span>
-                </div>
-            </div>
-        </div>
-
-        <!--Cartridge Notice-->
-        <div class="row no-gutters" style="padding: 0.5em 0;">
-            <div class="col">
-                <div class="cartridge-notice">
-                    <p>
-                        <span style="">*</span>
-                        <span style="">super 8<br>cartridge</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!--Cartridge Banner-->
-        <div class="row no-gutters cartridge-banner">
-            <div style="margin: auto;">
-                <div class="row no-gutters">
-                    <div class="col">
-                        <p class="title">Kodachrome 40</p>
-                    </div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col">
-                        <p class="subtitle">Color Movie Film</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Cartridge Type-->
-        <div class="row no-gutters" style="padding: 0.5em 0;">
-            <div class="col">
-                <div class="cartridge-type">
-                    <span>TYPE A</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<?= $this->partial('_partials/home/box.php'); ?>
 
 <!--World (Map)-->
-<section class="container-fluid vertical-align" style="" id="world" next="#federation" previous="#box">
-    <div class="row" style="height: 100%;">
-        <!--Info-->
-        <div class="col-lg-4">
-            <div class="vertical-align" style="height: 100%; ">
-                <div class="container-fluid">
-                    <!--Header-->
-                    <div class="row">
-                        <div class="col">
-                            <h2>Explore Festivals by Country</h2>
-                        </div>
-                    </div>
-                    <!--Description-->
-                    <div class="row">
-                        <div class="col">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <a href="">View Countries List</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Map-->
-        <div class="col-lg">
-            <div id="<?php echo $mapID; ?>" style="width: 100%; height: 100%; position: absolute; right:0;">
-                <?php
-                echo $this->partial("_partials/open-layers-map.php", array(
-                    'records' => get_records('SuperEightFestivalsCountry', array(), -1),
-                    'mapID' => $mapID,
-                ));
-                ?>
-            </div>
-        </div>
-    </div>
-</section>
+<?= $this->partial('_partials/home/world.php'); ?>
 
 <!--Federation-->
-<section class="container-fluid vertical-align" style="background-color: #e2e2e2; height: 100vh; width: 100%;" id="federation" next="#filmmakers" previous="#world">
-    <div class="row" style="height: 100%;">
-
-        <!--Image-->
-        <div class="col-lg">
-            <div class="vertical-align horizontal-align" style="height: 100%;">
-                <img src="<?php echo img('FederationLogoFull.png', 'images') ?>" alt="" width="900"/>
-            </div>
-        </div>
-
-        <!--Info-->
-        <div class="col-lg-5">
-            <div class="vertical-align" style="height: 100%; ">
-                <div class="container-fluid">
-                    <!--Header-->
-                    <div class="row">
-                        <div class="col">
-                            <h2>Learn about the Federation</h2>
-                        </div>
-                    </div>
-                    <!--Description-->
-                    <div class="row">
-                        <div class="col">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <a href="">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<?= $this->partial('_partials/home/federation.php'); ?>
 
 <!--Filmmakers-->
-<section class="container-fluid vertical-align" style="background-color: #f2f2f2; height: 100vh; width: 100%;" id="filmmakers" next="" previous="#federation">
-    <div class="row" style="height: 100%;">
-        <!--Image-->
-        <div class="col-lg">
-            <div class="vertical-align horizontal-align" style="height: 100%; transform: scaleX(-1);">
-                <img src="<?php echo img('BauerS715.png', 'images') ?>" alt="" width="400"/>
-            </div>
-        </div>
-        <!--Info-->
-        <div class="col-lg-4">
-            <div class="vertical-align" style="height: 100%; ">
-                <div class="container-fluid">
-                    <!--Header-->
-                    <div class="row">
-                        <div class="col">
-                            <h2>Meet the Filmmakers</h2>
-                        </div>
-                    </div>
-                    <!--Description-->
-                    <div class="row">
-                        <div class="col">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <a href="">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Image-->
-        <div class="col-lg">
-            <div class="vertical-align horizontal-align" style="height: 100%;">
-                <img src="<?php echo img('bolex680.png', 'images') ?>" alt="" width="400"/>
-            </div>
-        </div>
-    </div>
-</section>
+<?= $this->partial('_partials/home/filmmakers.php'); ?>
 
 
 <script>
-    // back to top of page
     $(document).ready(() => {
         window.scrollTo(0, 0);
         let prevSection = $('section').first().attr('previous');
