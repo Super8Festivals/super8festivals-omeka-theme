@@ -22,9 +22,10 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
 <script>
     $(document).ready(() => {
         window.scrollTo(0, 0);
-        let prevSection = $('section').first().attr('previous');
-        let currentSection = "#" + $('section').first().attr('id');
-        let nextSection = $('section').first().attr('next');
+        let sections = $('section');
+        let prevSection = sections.first().attr('previous');
+        let currentSection = "#" + sections.first().attr('id');
+        let nextSection = sections.first().attr('next');
         // console.log(`Prev: ${prevSection} | Current: ${currentSection} | Next: ${nextSection}`);
         // capture mouse scroll
         $('body').on('mousewheel DOMMouseScroll', function (e) {
