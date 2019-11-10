@@ -209,14 +209,20 @@ footer
 
 // ------------------------------------------------------ \\
 
-.container-fluid.simple-nav-top
+.simple-nav-top
 {
-  position         : absolute;
-  height           : 50px;
-  //height: 100%;
-  bottom           : 0;
-  background-color : #000000;
-  //padding-bottom: 0.5em;
+  overflow   : hidden;
+  z-index    : 9999;
+  position   : absolute;
+  height     : 50px;
+  bottom     : 0;
+  background : #000000 $NoiseImage;
+
+  &.sticky
+  {
+    position : fixed;
+    top      : 0;
+  }
 
   h1.nav-brand
   {

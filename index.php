@@ -58,37 +58,38 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
     </div>
 
 
-    <!--Main Navigation-->
-    <div class="container-fluid simple-nav-top">
-        <div class="row no-gutters vertical-align">
-            <!--Branding-->
-            <div class="col-lg-3">
-                <h1 class="nav-brand">
-                    <a href="/">
-                        <img src="<?php echo src('logo.png', 'images/'); ?>" class="logo" alt="Super 8 Festivals">
-                    </a>
-                </h1>
-            </div>
-            <!--Links-->
-            <div class="col-lg horizontal-align links">
-                <?php echo public_nav_main(); ?>
-            </div>
-            <!--Search-->
-            <div class="col-lg-3 horizontal-align vertical-align">
-                <div class="input-group search">
-                    <form id="search-form" name="search-form" action="search" method="get">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="la la-search"></i></span>
-                        </div>
-                        <input name="query" id="query" value type="text" class="form-control" placeholder="Enter search text here..." aria-label="Search" aria-describedby="basic-addon1">
-                        <button name="submit_search" id="submit_search" type="submit" value="Search">Search</button>
-                    </form>
-                </div>
+</section>
+
+
+<!--Main Navigation-->
+<div class="container-fluid simple-nav-top">
+    <div class="row no-gutters vertical-align">
+        <!--Branding-->
+        <div class="col-lg-3">
+            <h1 class="nav-brand">
+                <a href="/">
+                    <img src="<?php echo src('logo.png', 'images/'); ?>" class="logo" alt="Super 8 Festivals">
+                </a>
+            </h1>
+        </div>
+        <!--Links-->
+        <div class="col-lg horizontal-align links">
+            <?php echo public_nav_main(); ?>
+        </div>
+        <!--Search-->
+        <div class="col-lg-3 horizontal-align vertical-align">
+            <div class="input-group search">
+                <form id="search-form" name="search-form" action="search" method="get">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="la la-search"></i></span>
+                    </div>
+                    <input name="query" id="query" value type="text" class="form-control" placeholder="Enter search text here..." aria-label="Search" aria-describedby="basic-addon1">
+                    <button name="submit_search" id="submit_search" type="submit" value="Search">Search</button>
+                </form>
             </div>
         </div>
     </div>
-
-</section>
+</div>
 
 <!--World (Map)-->
 <section class="container-fluid vertical-align" style="" id="world" next="#federation" previous="#box">
@@ -279,6 +280,20 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
                 scrollTop: $(elemID).offset().top
             }, duration);
         }
+    });
+</script>
+
+<script>
+    $(document).ready(() => {
+        $(document).scroll(() => {
+            let elementTarget = document.getElementById("box");
+            let nav = $('.simple-nav-top');
+            if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight) - 50) {
+                if (!nav.hasClass('sticky')) nav.addClass('sticky');
+            } else {
+                if (nav.hasClass('sticky')) nav.removeClass('sticky');
+            }
+        });
     });
 </script>
 
