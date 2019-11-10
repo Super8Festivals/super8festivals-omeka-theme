@@ -138,9 +138,11 @@ footer
 
 #world
 {
-  background : #FFFFFF $NoiseImage;
-  height     : 100vh;
-  width      : 100%;
+  background  : #FFFFFF $NoiseImage;
+  height      : 100vh;
+  width       : 100%;
+
+  padding-top : $NavbarHeight;
 }
 
 #federation
@@ -217,7 +219,7 @@ footer
   overflow   : hidden;
   z-index    : 9999;
   position   : absolute;
-  height     : 50px;
+  height     : $NavbarHeight;
   bottom     : 0;
   background : #000000 $NoiseImage;
 
