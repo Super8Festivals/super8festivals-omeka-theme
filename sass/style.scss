@@ -1,210 +1,33 @@
 @import "_globals.scss";
 @import "_helpful.scss";
 
+html
+{
+  scroll-behavior : smooth;
+}
+
 body
 {
-  display        : flex;
-  flex-direction : column;
-  min-height     : 100vh;
-  font-family    : 'Roboto', sans-serif;
+  //display        : flex;
+  //flex-direction : column;
+  //min-height     : 100vh;
+  font-family : 'Roboto', sans-serif;
   //font-family    : 'Roboto Mono', monospace;
   //font-family    : 'Playfair Display', serif;
 }
+
 
 h1, h2, h3, h4, h5, h6
 {
   font-family : "Staatliches", sans-serif;
 }
 
-header
-{
-  z-index : 999;
-
-  .cartridge-notice
-  {
-    p
-    {
-      height : 50px;
-      margin : 0;
-
-      span:first-child
-      {
-        color : red; font-weight : bold; font-size : 4em;
-      }
-
-      span:not(:first-child)
-      {
-        font-style   : italic;
-        font-weight  : bold;
-        padding-left : 0.5em;
-      }
-    }
-  }
-
-  .nav-top
-  {
-    background  : $KodachromeBoxBG $NoiseImage;
-
-    padding-top : 10px;
-    //padding-bottom   : 10px;
-    //border-top    : 10px solid $KodachromeBoxBG;
-    //border-bottom    : 10px solid $KodachromeBoxBG;
-    //height           : 130px;
-
-    .row
-    {
-      padding : 0.25em 0;
-    }
-
-    .banner-bg
-    {
-      background : $KodachromeBoxBanner $NoiseImage;
-    }
-
-    h1.nav-brand
-    {
-      margin  : 0;
-      padding : 0.25em 0;
-
-      .logo
-      {
-        width      : 400px;
-        padding    : 0.25em;
-        transition : 0.1s ease-in-out;
-
-        &:hover
-        {
-          width      : 405px;
-          transition : 0.1s ease-in-out;
-          //box-shadow : 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
-        }
-      }
-    }
-
-
-    .search
-    {
-      background    : $KodachromeBoxBG $NoiseImage;
-      border-bottom : 1px dashed black;
-      color         : #FFFFFF;
-
-      transition    : 0.2s ease-in-out;
-
-      &:hover, &:focus-within
-      {
-        transition : 0.2s ease-in-out;
-        background : darken($KodachromeBoxBG, 5%) $NoiseImage;
-      }
-
-      form
-      {
-        display : flex;
-        width   : 100%;
-
-        .input-group-text
-        {
-          //background-color : darken($KodachromeBoxBanner, 13%);
-          background : none;
-          border     : none;
-          padding    : 0.5em;
-          height     : 100%;
-          color      : black;
-        }
-
-        input
-        {
-
-          background : none;
-          border     : none;
-          padding    : 0.5em;
-          height     : 100%;
-        }
-
-        button
-        {
-          //background-color : darken($KodachromeBoxBanner, 13%);
-          background     : none;
-          //width            : 200px;
-          border         : none;
-          padding        : 0.75em 2em;
-          height         : 100%;
-          text-transform : lowercase !important;
-          font-weight    : bold;
-          font-style     : italic;
-          //border         : 1px dashed red;
-        }
-      }
-    }
-
-    .links
-    {
-      padding        : 0.25em 0;
-      text-transform : uppercase;
-      font-family    : "Staatliches", sans-serif;
-      font-size      : 1.4em;
-      letter-spacing : 0.1em;
-
-      ul.navigation
-      {
-        margin      : 0;
-        padding     : 0;
-        height      : 100%;
-        display     : flex;
-        align-items : center;;
-
-        li
-        {
-          display : inline-block;
-          padding : 0 1.25em;
-
-          a
-          {
-            color           : black;
-            padding         : 1em;
-
-            transition      : 0.1s ease-in-out;
-            text-decoration : none;
-
-            &:hover
-            {
-              color                 : black;
-              transition            : 0.1s ease-in-out;
-              text-decoration       : underline;
-              text-decoration-style : dashed;
-            }
-          }
-        }
-
-        li.active
-        {
-          //font-weight : bold;
-        }
-      }
-    }
-
-
-  }
-}
 
 footer
 {
   display        : flex;
   flex-direction : row;
   background     : $KodachromeBoxBG $NoiseImage;
-
-  a
-  {
-    color       : #000000;
-    font-weight : bold;
-  }
-
-  .icons
-  {
-    .nav-item
-    {
-      font-size : 2em;
-    }
-  }
 
   p
   {
@@ -222,66 +45,134 @@ footer
   }
 }
 
-main.container-fluid
+// ------------------------------------------------------ \\
+.super8-box
 {
-  //padding          : 0;
-  background : $KodachromeBoxBG $NoiseImage;
-
-  @extend %horizontal-align;
-
-  section
+  .container-fluid
   {
-    h2.section-title
+    background : #FABA01 $NoiseImage;
+    height     : 100vh;
+    width      : 100%;
+    padding    : 0;
+
+    .cartridge-dimensions
     {
       @extend %horizontal-align;
-    }
 
-    margin-top : 50px;
-  }
-}
-
-
-.map-area
-{
-  width  : 100%;
-  height : 100%;
-
-  .row
-  {
-    height : 100%;
-  }
-
-  .map-sidebar
-  {
-    ul, li
-    {
-      margin  : 0;
-      padding : 0;
-    }
-
-    ul
-    {
-      list-style-type : none;
-
-      li
+      span
       {
-        transition  : 0.1s ease-in-out;
-        margin      : 50px 0;
-        font-family : "Staatliches", sans-serif;
+        font-weight : bold;
+        margin      : 0;
+        font-size   : 1.5em;
+      }
+    }
 
-        a
+    .cartridge-notice
+    {
+      margin-left : 50px;
+
+      p
+      {
+        @extend %vertical-align;
+        height : 50px;
+        margin : 0;
+
+        span:first-child
         {
-          text-decoration : none;
+          color : red; font-weight : bold; font-size : 4em;
         }
 
-        &:hover
+        span:not(:first-child)
         {
-          box-shadow : 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+          font-style   : italic;
+          font-weight  : bold;
+          padding-left : 0.5em;
         }
       }
     }
+
+    .cartridge-type
+    {
+      display         : flex;
+      justify-content : flex-end;
+      padding         : 1em;
+      margin-right    : 75px;
+
+      span
+      {
+        font-family : "Staatliches", sans-serif;
+        font-weight : bold;
+        margin      : 0;
+        font-size   : 2.5em;
+      }
+    }
+
+    .cartridge-banner
+    {
+      background : #CE2900 $NoiseImage;
+      margin-top : 40vh;
+
+      p
+      {
+        color       : #FABA01;
+        font-weight : bold;
+        margin      : 0;
+
+        &.title
+        {
+          font-size : 4em;
+        }
+
+        &.subtitle
+        {
+          font-size : 2em;
+        }
+      }
+    }
+
   }
 }
+
+#world
+{
+  background : #FFFFFF $NoiseImage;
+  height     : 100vh;
+  width      : 100%;
+}
+
+#federation
+{
+  background : #E2E2E2 $NoiseImage;
+  height     : 100vh;
+  width      : 100%;
+}
+
+#filmmakers
+{
+  background : #FFFFFF $NoiseImage;
+  height     : 100vh;
+  width      : 100%;
+}
+
+#filmmakers
+{
+  background : #FFFFFF $NoiseImage;
+  height     : 100vh;
+  width      : 100%;
+}
+
+// ------------------------------------------------------ \\
+
+
+.map
+{
+  margin  : 0;
+  padding : 0 5em 5em 5em;
+  width   : 100%;
+  height  : 100%;
+}
+
+// ------------------------------------------------------ \\
 
 .cartridge-box
 {
@@ -300,14 +191,6 @@ main.container-fluid
   }
 }
 
-html, body, .map
-{
-  margin  : 0;
-  padding : 0;
-  width   : 100%;
-  height  : 100%;
-}
-
 
 .countries-list
 {
@@ -322,4 +205,130 @@ html, body, .map
       color : $KodachromeBoxBanner;
     }
   }
+}
+
+// ------------------------------------------------------ \\
+
+.container-fluid.simple-nav-top
+{
+  position         : absolute;
+  height           : 50px;
+  //height: 100%;
+  bottom           : 0;
+  background-color : #000000;
+  //padding-bottom: 0.5em;
+
+  h1.nav-brand
+  {
+    margin-left : 25px;
+    //padding : 0.25em 0;
+
+    .logo
+    {
+      width  : 300px;
+      height : 100%;
+    }
+  }
+
+  .links
+  {
+    //padding        : 0.25em 0;
+    text-transform : uppercase;
+    font-family    : "Staatliches", sans-serif;
+    font-size      : 1.4em;
+    letter-spacing : 0.1em;
+
+    ul.navigation
+    {
+      margin      : 0;
+      padding     : 0;
+      height      : 100%;
+      display     : flex;
+      align-items : center;;
+
+      li
+      {
+        display : inline-block;
+        margin  : 0 1em;
+        height  : 100%;
+
+        a
+        {
+          color           : #FFFFFF;
+          //padding         : 1em;
+          height          : 100%;
+          transition      : 0.1s ease-in-out;
+          text-decoration : none;
+
+          &:hover
+          {
+            transition            : 0.1s ease-in-out;
+            text-decoration       : underline;
+            text-decoration-style : dashed;
+          }
+        }
+      }
+
+      li.active
+      {
+        //font-weight : bold;
+      }
+    }
+  }
+
+  .search
+  {
+    margin-right  : 25px;
+    background    : #000000 $NoiseImage;
+    border-bottom : 1px dashed black;
+    transition    : 0.2s ease-in-out;
+
+    &:hover, &:focus-within
+    {
+      transition : 0.2s ease-in-out;
+      background : lighten(#000000, 5%) $NoiseImage;
+    }
+
+    form
+    {
+      display : flex;
+      width   : 100%;
+
+      .input-group-text
+      {
+        background : none;
+        border     : none;
+        padding    : 0.5em;
+        height     : 100%;
+      }
+
+      input
+      {
+        background : none;
+        border     : none;
+        padding    : 0.5em;
+        height     : 100%;
+      }
+
+      button
+      {
+        color          : #FFFFFF;
+        background     : none;
+        border         : none;
+        padding        : 0.75em 2em;
+        height         : 100%;
+        text-transform : lowercase !important;
+        //font-weight    : bold;
+        //font-style     : italic;
+      }
+    }
+  }
+
+
+}
+
+
+#admin-bar
+{
+  display : none;
 }

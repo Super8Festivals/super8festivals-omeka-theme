@@ -51,6 +51,8 @@
     queue_js_url("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js");
     queue_js_url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js");
     // -- END BOOTSTRAP --
+    // jQuery
+    queue_js_url("https://code.jquery.com/jquery-3.4.1.min.js");
     echo head_js();
     ?>
 </head>
@@ -81,11 +83,12 @@
         }
     }
 
-    echo $this->partial('_partials/nav-top.php', array(
-        'searchPlaceholderText' => '',
-        'searchButtonText' => 'Search',
-        'items' => $navItems,
-    )); ?>
+    //    echo $this->partial('_partials/nav-top.php', array(
+    //        'searchPlaceholderText' => '',
+    //        'searchButtonText' => 'Search',
+    //        'items' => $navItems,
+    //    ));
+    ?>
 
 </header>
 
@@ -96,5 +99,5 @@
     <?php endif; ?>
 </div>
 
-<main id="wrap" class="container-fluid flex-fill">
+<main>
     <?php fire_plugin_hook('public_content_top', array('view' => $this)); ?>
