@@ -83,11 +83,9 @@
         }
     }
 
-    //    echo $this->partial('_partials/nav-top.php', array(
-    //        'searchPlaceholderText' => '',
-    //        'searchButtonText' => 'Search',
-    //        'items' => $navItems,
-    //    ));
+    echo $this->partial('_partials/nav-top.php', array(
+        'sticky' => current_url() != '/',
+    ));
     ?>
 
 </header>

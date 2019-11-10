@@ -8,12 +8,7 @@ html
 
 body
 {
-  //display        : flex;
-  //flex-direction : column;
-  //min-height     : 100vh;
   font-family : 'Roboto', sans-serif;
-  //font-family    : 'Roboto Mono', monospace;
-  //font-family    : 'Playfair Display', serif;
 }
 
 
@@ -22,28 +17,12 @@ h1, h2, h3, h4, h5, h6
   font-family : "Staatliches", sans-serif;
 }
 
-
-footer
+// Omeka Admin Bar (top)
+#admin-bar
 {
-  background     : $KodachromeBoxBG $NoiseImage;
-  display        : flex;
-  flex-direction : row;
-
-  p
-  {
-    margin         : 0;
-    //font-weight: bold;
-    font-family    : "Staatliches", sans-serif;
-    letter-spacing : 3px;
-    font-size      : 1em;
-  }
-
-  .copyright
-  {
-    padding        : 1em 0;
-    text-transform : uppercase;
-  }
+  display : none; // hide it because it's in our way
 }
+
 
 // ------------------------------------------------------ \\
 .super8-box
@@ -334,12 +313,35 @@ footer
       }
     }
   }
-
-
 }
 
+// ------------------------------------------------------ \\
 
-#admin-bar
+section.container
 {
-  display : none;
+  margin-top : $NavbarHeight;
+}
+
+// ------------------------------------------------------ \\
+
+footer
+{
+  background     : $KodachromeBoxBG $NoiseImage;
+  display        : flex;
+  flex-direction : row;
+
+  p
+  {
+    margin         : 0;
+    //font-weight: bold;
+    font-family    : "Staatliches", sans-serif;
+    letter-spacing : 3px;
+    font-size      : 1em;
+  }
+
+  .copyright
+  {
+    padding        : 1em 0;
+    text-transform : uppercase;
+  }
 }

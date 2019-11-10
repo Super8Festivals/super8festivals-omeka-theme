@@ -6,9 +6,6 @@
 $isPluginActive = plugin_is_active("SuperEightFestivals");
 ?>
 
-<!--Navbar-->
-<?php echo $this->partial('_partials/nav-top.php'); ?>
-
 <!--Box-->
 <?= $this->partial('_partials/home/box.php'); ?>
 

@@ -1,5 +1,5 @@
 <!--Main Navigation-->
-<div class="container-fluid simple-nav-top">
+<div class="container-fluid simple-nav-top <?php echo $sticky ? 'sticky' : "" ?>">
     <div class="row no-gutters vertical-align">
         <!--Branding-->
         <div class="col-lg-3">
