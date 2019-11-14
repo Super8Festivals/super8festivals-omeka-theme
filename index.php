@@ -43,6 +43,20 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
                 }
             }
         });
+        // capture keystrokes
+        $(document).keydown(function (e) {
+            switch (e.which) {
+                case 38: // up
+                    onScrollUp();
+                    break;
+                case 40: // down
+                    onScrollDown();
+                    break;
+                default:
+                    return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+        });
         // capture anchor click
         $('a.previous').click((event) => {
             event.preventDefault();
