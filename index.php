@@ -93,6 +93,8 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
             changeSection(nextSection);
         };
         scrollIntoView = (elemID, duration = 10) => {
+            if ($(elemID) === undefined) return;
+            if ($(elemID).offset() === undefined) return;
             $([document.documentElement, document.body]).animate({
                 scrollTop: $(elemID).offset().top
             }, duration);
