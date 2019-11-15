@@ -44,59 +44,63 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
             }
         });
         // capture keystrokes
+        let shiftPressed = false;
+
+        $(document).keyup((e) => {
+            switch (e.which) {
+                default:
+                    return;
+                case 16:
+                    shiftPressed = false;
+                    return;
+            }
+        });
         $(document).keydown(function (e) {
             switch (e.which) {
+                case 16:
+                    shiftPressed = true;
+                    break;
+                case 32:
+                    if (shiftPressed) onScrollUp(); else onScrollDown();
+                    break;
+                case 33: // page up
                 case 38: // up
                     onScrollUp();
                     break;
+                case 34: // page down
                 case 40: // down
                     onScrollDown();
                     break;
                 default:
-                    return; // exit this handler for other keys
+                    return;
             }
             e.preventDefault(); // prevent the default action (scroll / move caret)
         });
+        onScrollUp = () => {
+            setCurrentSection(prevSection);
+        };
+        onScrollDown = () => {
+            setCurrentSection(nextSection);
+        };
         // capture anchor click
-        $('a.previous').click((event) => {
-            event.preventDefault();
-            const {target} = event;
-            if (target === undefined) return;
-            const parent = $(target).closest("section");
-            if (parent === undefined) return;
-            changeSection(parent.attr('previous'));
-        });
-        $('a.next').click((event) => {
-            event.preventDefault();
-            const {target} = event;
-            if (target === undefined) return;
-            const parent = $(target).closest("section");
-            if (parent === undefined) return;
-            changeSection(parent.attr('next'));
-        });
-        changeSection = (elemID) => {
-            if (elemID === undefined) return;
+        // $('a.section-jump').click((event) => {
+        //     changeSection();
+        // });
+        setCurrentSection = (elemID) => {
             scrollIntoView(elemID);
             update(elemID);
         };
-        update = (setionElementID) => {
-            prevSection = $(setionElementID).attr('previous');
-            currentSection = "#" + $(setionElementID).attr('id');
-            nextSection = $(setionElementID).attr('next');
-        };
-        onScrollUp = () => {
-            if (prevSection === undefined) return;
-            changeSection(prevSection);
-        };
-        onScrollDown = () => {
-            if (nextSection === undefined) return;
-            changeSection(nextSection);
+        update = (sectionElementID) => {
+            if (sectionElementID === undefined || sectionElementID === "") return;
+            const elem = $(sectionElementID);
+            prevSection = elem.attr('previous');
+            currentSection = "#" + elem.attr('id');
+            nextSection = elem.attr('next');
         };
         scrollIntoView = (elemID, duration = 10) => {
-            if ($(elemID) === undefined) return;
-            if ($(elemID).offset() === undefined) return;
+            if ($(elemID) === undefined || $(elemID).offset() === undefined) return;
             $([document.documentElement, document.body]).animate({
-                scrollTop: $(elemID).offset().top
+                scrollTop: $(elemID).offset().top,
             }, duration);
         }
     });
