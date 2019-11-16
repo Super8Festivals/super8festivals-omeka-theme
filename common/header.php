@@ -84,7 +84,7 @@
     }
 
     echo $this->partial('_partials/nav-top.php', array(
-        'sticky' => current_url() != '/',
+        'top' => current_url() != '/',
     ));
     ?>
 

@@ -110,8 +110,8 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
     $(document).ready(() => {
         $(document).scroll(() => {
             let elementTarget = document.getElementById("box");
-            let nav = $('.simple-nav-top');
-            if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight) - 50) {
+            let nav = $('#nav-top');
+            if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight) - nav.height()) {
                 if (!nav.hasClass('sticky')) nav.addClass('sticky');
             } else {
                 if (nav.hasClass('sticky')) nav.removeClass('sticky');
