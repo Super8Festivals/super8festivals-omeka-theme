@@ -3,7 +3,7 @@
     <div class="col">
         <div class="row">
             <div class="col">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <h1>
                         <img src="<?php echo src('logo.png', 'images/'); ?>" class="logo" alt="Super 8 Festivals">
                     </h1>
