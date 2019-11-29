@@ -1,9 +1,18 @@
-<?php echo head(array(
+<?php
+echo head(array(
     'title' => 'Home'
-)); ?>
+));
+$isPluginActive = plugin_is_active("SuperEightFestivals");
+?>
 
 <?php
-$isPluginActive = plugin_is_active("SuperEightFestivals");
+if (!$isPluginActive) {
+    echo "
+<div style='position: absolute; top: 41px; z-index; 999; width: 100%; font-size: 1.5em; font-weight: bold; color: red; background-color: #FFFF00AA; display: flex; justify-content: center;'>
+    <p class='mb-0'>WARNING: The Super8Festivals plugin is not enabled/installed!</p>
+</div>
+";
+}
 ?>
 
 <section class="container-fluid" id="home-section">
