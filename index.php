@@ -6,118 +6,52 @@
 $isPluginActive = plugin_is_active("SuperEightFestivals");
 ?>
 
-<!--Box-->
-<?= $this->partial('_partials/home/box.php'); ?>
+<section class="container-fluid" id="home-section">
 
-<!--World (Map)-->
-<?= $this->partial('_partials/home/world.php'); ?>
+    <!--2 Col Body-->
+    <div class="row no-gutters">
+        <!--Side Navigation-->
+        <div class="col-lg-4 pl-2 pr-2 d-flex flex-column">
+            <a href="federation">
+                <img src="<?php echo src('FederationLogoFull.png', 'images/'); ?>" class="img-fluid" alt="Federation">
+            </a>
+            <h2 class="mt-3 text-center">
+                Federation
+            </h2>
+            <ul class="nav flex-column text-center">
+                <li class="nav-item"><a class="nav-link" href="history">History</a></li>
+                <li class="nav-item"><a class="nav-link" href="filmmakers">Filmmakers</a></li>
+                <li class="nav-item"><a class="nav-link" href="countries">Countries</a></li>
+            </ul>
+        </div>
+        <!--World Map-->
+        <div class="col-lg-8 d-flex justify-content-center align-items-center flex-column" style="height: 70vh;">
+            <div id="map">
+                <?php
+                echo $this->partial("_partials/open-layers-map.php", array(
+                    'records' => get_records('SuperEightFestivalsCity', array(), -1),
+                    'mapID' => "map",
+                ));
+                ?>
+                <div id="link-box" class="d-flex justify-content-center align-items-center pt-1 pb-1">
+                    <a href="countries" class="stretched-link">Click here for a full list of countries</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!--Federation-->
-<?= $this->partial('_partials/home/federation.php'); ?>
+    <!--Bottom Navigation-->
+    <div class="row">
+        <div class="col">
+            <ul class="row nav nav-fill">
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Submit</a></li>
+            </ul>
+        </div>
+    </div>
 
-<!--Filmmakers-->
-<?= $this->partial('_partials/home/filmmakers.php'); ?>
+</section>
 
-
-<script>
-    $(document).ready(() => {
-        window.scrollTo(0, 0);
-        let sections = $('section');
-        let prevSection = sections.first().attr('previous');
-        let currentSection = "#" + sections.first().attr('id');
-        let nextSection = sections.first().attr('next');
-        // console.log(`Prev: ${prevSection} | Current: ${currentSection} | Next: ${nextSection}`);
-        // capture mouse scroll
-        $('body').on('mousewheel DOMMouseScroll', function (e) {
-            if (typeof e.originalEvent.detail == 'number' && e.originalEvent.detail !== 0) {
-                if (e.originalEvent.detail > 0) {
-                    onScrollDown();
-                } else if (e.originalEvent.detail < 0) {
-                    onScrollUp();
-                }
-            } else if (typeof e.originalEvent.wheelDelta == 'number') {
-                if (e.originalEvent.wheelDelta < 0) {
-                    onScrollDown();
-                } else if (e.originalEvent.wheelDelta > 0) {
-                    onScrollUp();
-                }
-            }
-        });
-        // capture keystrokes
-        let shiftPressed = false;
-
-        $(document).keyup((e) => {
-            switch (e.which) {
-                default:
-                    return;
-                case 16:
-                    shiftPressed = false;
-                    return;
-            }
-        });
-        $(document).keydown(function (e) {
-            switch (e.which) {
-                case 16:
-                    shiftPressed = true;
-                    break;
-                case 32:
-                    if (shiftPressed) onScrollUp(); else onScrollDown();
-                    break;
-                case 33: // page up
-                case 38: // up
-                    onScrollUp();
-                    break;
-                case 34: // page down
-                case 40: // down
-                    onScrollDown();
-                    break;
-                default:
-                    return;
-            }
-            e.preventDefault(); // prevent the default action (scroll / move caret)
-        });
-        onScrollUp = () => {
-            setCurrentSection(prevSection);
-        };
-        onScrollDown = () => {
-            setCurrentSection(nextSection);
-        };
-        // capture anchor click
-        // $('a.section-jump').click((event) => {
-        //     changeSection();
-        // });
-        setCurrentSection = (elemID) => {
-            scrollIntoView(elemID);
-            update(elemID);
-        };
-        update = (sectionElementID) => {
-            if (sectionElementID === undefined || sectionElementID === "") return;
-            const elem = $(sectionElementID);
-            prevSection = elem.attr('previous');
-            currentSection = "#" + elem.attr('id');
-            nextSection = elem.attr('next');
-        };
-        scrollIntoView = (elemID, duration = 10) => {
-            if ($(elemID) === undefined || $(elemID).offset() === undefined) return;
-            $([document.documentElement, document.body]).animate({
-                scrollTop: $(elemID).offset().top,
-            }, duration);
-        }
-    });
-</script>
-
-<script>
-    $(document).ready(() => {
-        $(document).scroll(() => {
-            let elementTarget = document.getElementById("box");
-            let nav = $('#nav-top');
-            if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight) - nav.height()) {
-                if (!nav.hasClass('sticky')) nav.addClass('sticky');
-            } else {
-                if (nav.hasClass('sticky')) nav.removeClass('sticky');
-            }
-        });
-    });
-</script>
 
 <?php echo foot(); ?>

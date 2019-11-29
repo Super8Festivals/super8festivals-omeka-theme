@@ -1,33 +1,4 @@
-.vertical-align
-{
-  display     : flex;
-  align-items : center;
-}
-
-%vertical-align
-{
-  display     : flex;
-  align-items : center;
-}
-
-.horizontal-align
-{
-  display         : flex;
-  justify-content : center;
-}
-
-%horizontal-align
-{
-  display         : flex;
-  justify-content : center;
-}
-
 .flex-fill
 {
   flex : 1 1 auto;
-}
-
-.title
-{
-  text-transform : capitalize;
 }

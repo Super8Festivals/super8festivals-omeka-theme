@@ -61,32 +61,44 @@
 
 <header role="banner">
     <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
-    <?php
 
-    $navItems = array(
-        // Home
-        array(
-            'title' => 'Home',
-            'href' => '/',
-            'active' => current_url() == '/',
-        ),
-    );
+    <!--Page Header-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <!--Branding-->
+                <div class="row pt-2 pb-2">
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <h2 class="brand">
+                            <a href="/">
+                                <img src="<?php echo src('logo.png', 'images/'); ?>" class="img-fluid" alt="Super8Festivals" width="600">
+                            </a>
+                        </h2>
+                    </div>
+                </div>
 
-    if (plugin_is_active(('SimplePages'))) {
-        $simplePagesLinks = simple_pages_get_links_for_children_pages(0);
-        foreach ($simplePagesLinks as $link) {
-            array_push($navItems, array(
-                'title' => $link['label'],
-                'href' => $link['uri'],
-                'active' => current_url() == $link['uri'],
-            ));
-        }
-    }
-
-    echo $this->partial('_partials/nav-top.php', array(
-        'top' => current_url() != '/',
-    ));
-    ?>
+                <!--Navigation-->
+                <div class="row">
+                    <div class="col">
+                        <!--Search Box-->
+                        <form class="form-group" id="search-form" name="search-form" action="search" method="get">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">
+                                        <i class="la la-search"></i>
+                                    </label>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button name="submit_search" id="submit_search" type="submit" value="Search" class="d-flex justify-content-end btn btn-outline-secondary">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </header>
 

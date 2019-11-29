@@ -2,8 +2,12 @@
 @import "_helpful.scss";
 
 html
+{ scroll-behavior : smooth; }
+
+// Omeka Admin Bar (top)
+#admin-bar
 {
-  scroll-behavior : smooth;
+  //display : none; // hide it because it's in our way
 }
 
 body
@@ -11,333 +15,45 @@ body
   font-family : 'Roboto', sans-serif;
 }
 
-
 h1, h2, h3, h4, h5, h6
 {
   font-family : "Staatliches", sans-serif;
 }
 
-// Omeka Admin Bar (top)
-#admin-bar
-{
-  display : none; // hide it because it's in our way
-}
-
-
 // ------------------------------------------------------ \\
-.super8-box
+
+.brand
 {
-  background : $KodachromeBoxBG $NoiseImage;
-
-  .container-fluid
+  img
   {
-    height  : 100vh;
-    width   : 100%;
-    padding : 0;
-
-    .cartridge-dimensions
-    {
-      @extend %horizontal-align;
-
-      span
-      {
-        font-weight : bold;
-        margin      : 0;
-        font-size   : 1.5em;
-      }
-    }
-
-    .cartridge-notice
-    {
-      margin-left : 50px;
-
-      p
-      {
-        @extend %vertical-align;
-        height : 50px;
-        margin : 0;
-
-        span:first-child
-        {
-          color       : red;
-          font-weight : bold;
-          font-size   : 4em;
-        }
-
-        span:not(:first-child)
-        {
-          font-style   : italic;
-          font-weight  : bold;
-          padding-left : 0.5em;
-        }
-      }
-    }
-
-    .cartridge-type
-    {
-      display         : flex;
-      justify-content : flex-end;
-      padding         : 1em;
-      margin-right    : 75px;
-
-      span
-      {
-        font-family : "Staatliches", sans-serif;
-        font-weight : bold;
-        margin      : 0;
-        font-size   : 2.5em;
-      }
-    }
-
-    .cartridge-banner
-    {
-      background : $KodachromeBoxBanner $NoiseImage;
-      margin-top : 40vh;
-
-      p
-      {
-        color       : $KodachromeBoxBG;
-        font-weight : bold;
-        margin      : 0;
-
-        &.title
-        {
-          font-size : 4em;
-        }
-
-        &.subtitle
-        {
-          font-size : 2em;
-        }
-      }
-    }
-
+    //height : 80px;
   }
 }
 
-#world
+#map
 {
-  background  : #FFFFFF $NoiseImage;
-  height      : 100vh;
-  width       : 100%;
+  width  : 100%;
+  height : 100%;
+  margin : auto;
 
-  padding-top : $NavbarHeight;
-}
-
-#federation
-{
-  background : #E2E2E2 $NoiseImage;
-  height     : 100vh;
-  width      : 100%;
-}
-
-#filmmakers
-{
-  background : #FFFFFF $NoiseImage;
-  height     : 100vh;
-  width      : 100%;
-}
-
-#filmmakers
-{
-  background : #FFFFFF $NoiseImage;
-  height     : 100vh;
-  width      : 100%;
-}
-
-// ------------------------------------------------------ \\
-
-
-.map
-{
-  margin  : 0;
-  padding : 0 5em 5em 5em;
-  width   : 100%;
-  height  : 100%;
-}
-
-// ------------------------------------------------------ \\
-
-.cartridge-box
-{
-  background      : url(https://i.imgur.com/wAI814f.png) no-repeat;
-  background-size : 150px 150px;
-  width           : 150px;
-  height          : 150px;
-  display         : flex;
-  justify-content : center;
-  align-items     : center;
-
-  .box-title
+  #link-box
   {
-    margin-top : 35px;
-    color      : $KodachromeBoxBG;
-  }
-}
-
-
-.countries-list
-{
-  li
-  {
-    font-family : "Staatliches", sans-serif;
-    font-size   : 1.25em;
-    //font-weight : bold;
+    position   : absolute; bottom : 0; left : 0; right : 0;
+    background : rgba(255, 255, 255, 0.75);
 
     a
     {
-      color : $KodachromeBoxBanner;
-    }
-  }
-}
+      color : #2E2E2E;
 
-// ------------------------------------------------------ \\
-
-#nav-top
-{
-  position       : absolute;
-  bottom         : 0;
-  z-index        : 9999;
-  width          : 100%;
-  text-transform : uppercase;
-  font-family    : "Staatliches", sans-serif;
-  font-size      : 1.4em;
-  height         : $NavbarHeight;
-  //height         : 100%;
-
-  &.sticky
-  {
-    position : fixed;
-    top      : 0;
-  }
-
-  &.bg-dark
-  {
-    background : #000000 $NoiseImage !important;
-  }
-
-  h1
-  {
-    img
-    {
-      width : 300px;
-    }
-  }
-
-  ul
-  {
-    margin      : 0;
-    padding     : 0;
-    @extend %horizontal-align;
-
-    display     : flex;
-    align-items : center;
-    width       : 100%;
-
-    li
-    {
-      display : inline-block;
-      margin  : 0 1em;
-      height  : 100%;
-
-      a
-      {
-        color           : #FFFFFF;
-        //padding         : 1em;
-        height          : 100%;
-        transition      : 0.1s ease-in-out;
+      &:hover
+      { color           : #000000;
         text-decoration : none;
-
-        &:hover
-        {
-          transition            : 0.1s ease-in-out;
-          text-decoration       : underline;
-          text-decoration-style : dashed;
-        }
-      }
-    }
-  }
-
-
-  .search
-  {
-    background    : lighten(#000000, 2.5%) $NoiseImage;
-    border-bottom : 1px dashed white;
-    transition    : 0.1s ease-in-out;
-    width         : 100%;
-
-    &:hover, &:focus-within
-    {
-      background : lighten(#000000, 5%) $NoiseImage;
-      transition : 0.1s ease-in-out;
-    }
-
-    form
-    {
-      display : flex;
-      width   : 100%;
-
-      .input-group-prepend
-      {
-        height : 100% !important;
-
-        .input-group-text
-        {
-          background : none;
-          border     : none;
-        }
-      }
-
-      input
-      {
-        background : none;
-        border     : none;
-        padding    : 0.5em;
-        height     : 100%;
-        //width      : 70%;
-      }
-
-      button
-      {
-        color      : #FFFFFF;
-        background : none;
-        border     : none;
-        padding    : 0.75em 1.25em;
-        height     : 100%;
       }
     }
   }
 }
 
-
-// ------------------------------------------------------ \\
-
-section.container, section.container-fluid
+#home-section
 {
-  padding-top : $NavbarHeight;
-  height      : 100vh;
-}
-
-// ------------------------------------------------------ \\
-
-footer
-{
-  background     : $KodachromeBoxBG $NoiseImage;
-  display        : flex;
-  flex-direction : row;
-
-  p
-  {
-    margin         : 0;
-    //font-weight: bold;
-    font-family    : "Staatliches", sans-serif;
-    letter-spacing : 3px;
-    font-size      : 1em;
-  }
-
-  .copyright
-  {
-    padding        : 1em 0;
-    text-transform : uppercase;
-  }
+  //background-color: $KodachromeBoxBG;
 }
