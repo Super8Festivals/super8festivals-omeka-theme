@@ -53,9 +53,9 @@ if (!$isPluginActive) {
     <div class="row">
         <div class="col">
             <ul class="row nav nav-fill">
-                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Submit</a></li>
+                <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="submit">Submit</a></li>
             </ul>
         </div>
     </div>
