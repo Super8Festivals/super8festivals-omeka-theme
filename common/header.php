@@ -98,6 +98,12 @@
                 </div>
             </div>
         </div>
+        <!--Breadcrumbs-->
+        <div class="row">
+            <div class="col">
+                <?= $this->partial('_partials/breadcrumbs.php'); ?>
+            </div>
+        </div>
     </div>
 
 </header>
