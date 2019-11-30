@@ -32,19 +32,39 @@ h1, h2, h3, h4, h5, h6
   height : 100%;
   margin : auto;
 
-  #link-box
+  #link-box, #info-box
   {
-    position   : absolute; bottom : 0; left : 0; right : 0;
-    background : rgba(255, 255, 255, 0.75);
+    background : rgba(0, 0, 0, 0.75);
+    color      : #FFFFFF;
+    text-align : center;
+
+    &:hover
+    {
+      background : rgba(0, 0, 0, 0.9);
+    }
 
     a
     {
-      color : #2E2E2E;
+      color : #FFFFFF;
 
       &:hover
-      { color           : #000000;
+      {
+        color           : #F2F2F2;
         text-decoration : none;
       }
     }
+  }
+
+  #link-box
+  {
+    position : absolute; bottom : 0; left : 0; right : 0;
+  }
+
+  #info-box
+  {
+    position      : absolute; top : 0; left : 0; right : 0;
+    width         : 25%;
+    margin        : 0 auto;
+    border-radius : 0 0 8px 8px;
   }
 }

@@ -35,15 +35,67 @@ if (!$isPluginActive) {
         </div>
         <!--World Map-->
         <div class="col-lg-8 d-flex justify-content-center align-items-center flex-column" style="height: 70vh;">
+            <style>
+                .ol-popup {
+                    position: absolute;
+                    background-color: white;
+                    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+                    padding: 15px;
+                    border-radius: 10px;
+                    border: 1px solid #cccccc;
+                    bottom: 12px;
+                    left: -50px;
+                    min-width: 280px;
+                }
+
+                .ol-popup:after, .ol-popup:before {
+                    top: 100%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    pointer-events: none;
+                }
+
+                .ol-popup:after {
+                    border-top-color: white;
+                    border-width: 10px;
+                    left: 48px;
+                    margin-left: -10px;
+                }
+
+                .ol-popup:before {
+                    border-top-color: #cccccc;
+                    border-width: 11px;
+                    left: 48px;
+                    margin-left: -11px;
+                }
+
+                .ol-popup-closer {
+                    text-decoration: none;
+                    position: absolute;
+                    top: 2px;
+                    right: 8px;
+                }
+
+                .ol-popup-closer:after {
+                    content: "✖";
+                }
+            </style>
+            <div id="popup" class="ol-popup d-flex align-items-center">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content" class="text-capitalize"></div>
+            </div>
             <div id="map">
                 <?php
-                echo $this->partial("_partials/open-layers-map.php", array(
-                    'records' => get_records('SuperEightFestivalsCity', array(), -1),
-                    'mapID' => "map",
-                ));
+                echo $this->partial("_partials/open-layers-map.php", array('mapID' => "map"));
                 ?>
                 <div id="link-box" class="d-flex justify-content-center align-items-center pt-1 pb-1">
                     <a href="countries" class="stretched-link">Click here for a full list of countries</a>
+                </div>
+                <div id="info-box" class="d-flex justify-content-center align-items-center pt-1 pb-1">
+                    <span>Click a marker to view information about it</span>
                 </div>
             </div>
         </div>

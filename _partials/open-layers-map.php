@@ -2,20 +2,24 @@
 <script type="text/javascript">
 
     let markers = [];
-    <?php foreach($records as $record): ?>
+    <?php foreach(get_records('SuperEightFestivalsCity', array(), -1) as $record): ?>
     <?php
     $latitude = $record->latitude;
     $longitude = $record->longitude;
+    $id = $record->id;
     $name = $record->name;
+    $countryID = $record->country_id;
     ?>
     markers.push(new ol.Feature({
         geometry: new ol.geom.Point(
             ol.proj.fromLonLat([
-                <?php echo $longitude; ?>,
-                <?php echo $latitude; ?>
+                <?= $longitude; ?>,
+                <?= $latitude; ?>
             ]),
         ),
-        name: "<?php echo $name; ?>",
+        name: "<?= $name; ?>",
+        id: <?= $id; ?>,
+        country: "<?= get_country_by_id($countryID)->name; ?>",
     }));
     <?php endforeach; ?>
 
@@ -47,10 +51,47 @@
         zoom: 0
     });
 
+    const popupContainer = document.getElementById('popup');
+    const popupContent = document.getElementById('popup-content');
+
+    const popupCloser = document.getElementById('popup-closer');
+    popupCloser.onclick = function () {
+        overlay.setPosition(undefined);
+        popupCloser.blur();
+        return false;
+    };
+
+    const overlay = new ol.Overlay({
+        element: popupContainer,
+        autoPan: true,
+        autoPanAnimation: {
+            duration: 250
+        }
+    });
+
     const map = new ol.Map({
         target: '<?php echo $mapID; ?>',
         layers: layers,
-        view: view
+        view: view,
+        overlays: [overlay],
+    });
+
+    map.on('singleclick', function (e) {
+        overlay.setPosition(undefined);
+        popupCloser.blur();
+        map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
+            const values = feature.values_;
+            const country = values.country;
+            const name = values.name;
+
+            const coordinate = e.coordinate;
+            popupContent.innerHTML = `
+<p class="mb-0">Country: ${country}</p>
+<p class="mb-0">City: ${name}</p>
+<p class="mb-0"><a href='/countries/${country.toLowerCase().replace(/\s/g, "-")}#${name.toLowerCase().replace(/\s/g, "-")}'>Click here for information</a></p>
+`;
+            overlay.setPosition(coordinate);
+        });
     });
 
 </script>
