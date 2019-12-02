@@ -5,16 +5,6 @@ echo head(array(
 $isPluginActive = plugin_is_active("SuperEightFestivals");
 ?>
 
-<?php
-if (!$isPluginActive) {
-    echo "
-<div style='position: absolute; top: 41px; z-index; 999; width: 100%; font-size: 1.5em; font-weight: bold; color: red; background-color: #FFFF00AA; display: flex; justify-content: center;'>
-    <p class='mb-0'>WARNING: The Super8Festivals plugin is not enabled/installed!</p>
-</div>
-";
-}
-?>
-
 <section class="container-fluid" id="home-section">
 
     <!--2 Col Body-->
@@ -89,7 +79,7 @@ if (!$isPluginActive) {
             </div>
             <div id="map">
                 <?php
-                echo $this->partial("_partials/open-layers-map.php", array('mapID' => "map"));
+                if ($isPluginActive) echo $this->partial("_partials/open-layers-map.php", array('mapID' => "map"));
                 ?>
                 <div id="link-box" class="d-flex justify-content-center align-items-center pt-1 pb-1">
                     <a href="countries" class="stretched-link">Click here for a full list of countries</a>

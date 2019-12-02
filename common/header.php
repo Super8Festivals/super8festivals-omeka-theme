@@ -71,7 +71,8 @@
                     <div class="col d-flex justify-content-center align-items-center">
                         <h2 class="brand">
                             <a href="/">
-                                <img src="<?php echo src('logo.png', 'images/'); ?>" class="img-fluid" alt="Super8Festivals" width="600">
+                                <img src="<?php echo src('logo.png', 'images/'); ?>" class="img-fluid"
+                                     alt="Super8Festivals" width="600">
                             </a>
                         </h2>
                     </div>
@@ -88,9 +89,12 @@
                                         <i class="la la-search"></i>
                                     </label>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                                       aria-describedby="button-addon2">
                                 <div class="input-group-append">
-                                    <button name="submit_search" id="submit_search" type="submit" value="Search" class="d-flex justify-content-end btn btn-outline-secondary">Search</button>
+                                    <button name="submit_search" id="submit_search" type="submit" value="Search"
+                                            class="d-flex justify-content-end btn btn-outline-secondary">Search
+                                    </button>
                                 </div>
                             </div>
                         </form>
@@ -109,11 +113,11 @@
 </header>
 
 <!--Make sure plugin is installed-->
-<div style="position: absolute; bottom: 50%; background: rgba(0,0,0,0.5); z-index: 9999; display: flex; justify-items: center; width: 100%;">
-    <?php if (!plugin_is_active("SuperEightFestivals")): ?>
-        <p style="font-weight: bold; color: red; font-size: 3em; width: 100%;" class="horizontal-align">The Super8Festivals Plugin must be installed for the theme to work correctly</p>
-    <?php endif; ?>
-</div>
+<?php if (!plugin_is_active("SuperEightFestivals")): ?>
+    <div style='position: absolute; top: 41px; z-index; 999; width: 100%; font-size: 1.5em; font-weight: bold; color: red; background-color: #FFFF00AA; display: flex; justify-content: center;'>
+        <p class='mb-0'>WARNING: The Super8Festivals plugin is not enabled/installed!</p>
+    </div>
+<?php endif; ?>
 
 <main>
     <?php fire_plugin_hook('public_content_top', array('view' => $this)); ?>
