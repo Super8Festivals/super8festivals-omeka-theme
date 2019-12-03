@@ -80,10 +80,10 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
             <div id="map" class="w-100 h-100 m-auto">
                 <?php if ($isPluginActive): ?>
                     <?= $this->partial("_partials/open-layers-map.php", array('mapID' => "map")); ?>
-                    <div id="info-box" class="d-flex justify-content-center align-items-center pt-1 pb-1">
+                    <div id="info-box" class="d-flex justify-content-center align-items-center pt-1 pb-1 text-center">
                         <span>Click a marker to view information about it</span>
                     </div>
-                    <div id="link-box" class="d-flex justify-content-center align-items-center pt-1 pb-1">
+                    <div id="link-box" class="d-flex justify-content-center align-items-center pt-1 pb-1 text-center">
                         <a href="countries" class="stretched-link">Click here for a full list of countries</a>
                     </div>
                 <?php endif; ?>

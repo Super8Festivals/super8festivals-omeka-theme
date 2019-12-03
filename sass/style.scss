@@ -3,21 +3,18 @@
 
 html {
   scroll-behavior: smooth;
-  //overflow-x      : hidden;
-  //margin-right    : calc(-1 * (100vw - 100%));
-}
-
-// Omeka Admin Bar (top)
-#admin-bar {
-  //display : none; // hide it because it's in our way
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+p, span {
+  font-family: 'Roboto Mono', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Vast Shadow', cursive;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 // ------------------------------------------------------ \\
