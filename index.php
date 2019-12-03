@@ -77,16 +77,16 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
                 <div id="popup-content" class="text-capitalize"></div>
             </div>
-            <div id="map">
-                <?php
-                if ($isPluginActive) echo $this->partial("_partials/open-layers-map.php", array('mapID' => "map"));
-                ?>
-                <div id="link-box" class="d-flex justify-content-center align-items-center pt-1 pb-1">
-                    <a href="countries" class="stretched-link">Click here for a full list of countries</a>
-                </div>
-                <div id="info-box" class="d-flex justify-content-center align-items-center pt-1 pb-1">
-                    <span>Click a marker to view information about it</span>
-                </div>
+            <div id="map" class="w-100 h-100">
+                <?php if ($isPluginActive): ?>
+                    <?= $this->partial("_partials/open-layers-map.php", array('mapID' => "map")); ?>
+                    <div id="link-box" class="d-flex justify-content-center align-items-center pt-1 pb-1">
+                        <a href="countries" class="stretched-link">Click here for a full list of countries</a>
+                    </div>
+                    <div id="info-box" class="d-flex justify-content-center align-items-center pt-1 pb-1">
+                        <span>Click a marker to view information about it</span>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
