@@ -27,7 +27,8 @@
     queue_css_url('//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
     // -- END BOOTSTRAP --
     // -- START GOOGLE FONTS --
-    queue_css_url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|Roboto+Mono|Staatliches&display=swap');
+    queue_css_url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|Roboto+Mono|Vast+Shadow&display=swap');
+
     // -- END GOOGLE FONTS --
 
 
