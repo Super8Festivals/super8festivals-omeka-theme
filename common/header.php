@@ -85,16 +85,13 @@
                         <form class="form-group" id="search-form" name="search-form" action="search" method="get">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="inputGroupSelect01">
+                                    <label class="input-group-text" for="query">
                                         <i class="la la-search"></i>
                                     </label>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Search" aria-label="Search"
-                                       aria-describedby="button-addon2">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" name="query" id="query">
                                 <div class="input-group-append">
-                                    <button name="submit_search" id="submit_search" type="submit" value="Search"
-                                            class="d-flex justify-content-end btn btn-outline-secondary">Search
-                                    </button>
+                                    <button id="submit_search" type="submit" class="d-flex justify-content-end btn btn-outline-secondary">Search</button>
                                 </div>
                             </div>
                         </form>
