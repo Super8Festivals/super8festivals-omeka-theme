@@ -88,7 +88,7 @@
             popupContent.innerHTML = `
 <p class="mb-0">Country: ${country}</p>
 <p class="mb-0">City: ${name}</p>
-<p class="mb-0"><a href='/countries/${country.toLowerCase().replace(/\s/g, "-")}#${name.toLowerCase().replace(/\s/g, "-")}'>Click here for information</a></p>
+<p class="mb-0"><a href='/countries/${country.toLowerCase().replace(/\s/g, "-")}#${name.toLowerCase().replace(/\s/g, "-")}'>More Information</a></p>
 `;
             overlay.setPosition(coordinate);
         });

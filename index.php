@@ -35,7 +35,7 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
                     border: 1px solid #cccccc;
                     bottom: 12px;
                     left: -50px;
-                    min-width: 280px;
+                    min-width: 300px;
                 }
 
                 .ol-popup:after, .ol-popup:before {
