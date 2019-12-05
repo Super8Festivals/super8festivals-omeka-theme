@@ -1,0 +1,51 @@
+.flex-fill {
+  flex: 1 1 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+}
+
+p, span {
+  font-family: "Roboto Mono", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Archivo Black", sans-serif;
+}
+
+#map #link-box, #map #info-box {
+  background: rgba(0, 0, 0, 0.75);
+  color: #FFFFFF;
+}
+#map #link-box:hover, #map #info-box:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+#map #link-box a, #map #info-box a {
+  color: #FFFFFF;
+}
+#map #link-box a:hover, #map #info-box a:hover {
+  color: #F2F2F2;
+  text-decoration: none;
+}
+#map #link-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#map #info-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 25%;
+  margin: 0 auto;
+  border-radius: 0 0 8px 8px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,6 +1,5 @@
 .sass-cache/
 .idea/
-css/style.css*
 
 # Created by https://www.gitignore.io/api/web,node,linux,macos,windows
 # Edit at https://www.gitignore.io/?templates=web,node,linux,macos,windows
@@ -168,3 +167,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/web,node,linux,macos,windows
+/.idea/
