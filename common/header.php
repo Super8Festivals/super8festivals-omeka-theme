@@ -71,7 +71,7 @@
                     <div class="col d-flex justify-content-center align-items-center">
                         <h2 class="brand">
                             <a href="/">
-                                <img src="<?php echo src('logo.png', 'images/'); ?>" class="img-fluid"
+                                <img src="<?php echo src('logo.png', 'images'); ?>" class="img-fluid"
                                      alt="Super8Festivals" width="600">
                             </a>
                         </h2>

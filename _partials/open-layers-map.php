@@ -40,7 +40,7 @@
             image: new ol.style.Icon({
                 crossOrigin: 'anonymous',
                 scale: 0.5,
-                src: '<?php echo src("marker.png", "images/"); ?>'
+                src: '<?php echo src("marker.png", "images"); ?>'
             })
         })
     }));

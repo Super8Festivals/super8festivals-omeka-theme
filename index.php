@@ -12,7 +12,7 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
         <!--Side Navigation-->
         <div class="col-lg-4 pl-2 pr-2 d-flex flex-column">
             <a href="federation">
-                <img src="<?php echo src('FederationLogoFull.png', 'images/'); ?>" class="img-fluid" alt="Federation">
+                <img src="<?php echo src('FederationLogoFull.png', 'images'); ?>" class="img-fluid" alt="Federation">
             </a>
             <h2 class="mt-3 text-center">
                 Federation
