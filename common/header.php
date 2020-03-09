@@ -82,7 +82,7 @@
                 <div class="row">
                     <div class="col">
                         <!--Search Box-->
-                        <form class="form-group" id="search-form" name="search-form" action="search" method="get">
+                        <form class="form-group" id="search-form" name="search-form" action="/search" method="get">
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text" for="query">
