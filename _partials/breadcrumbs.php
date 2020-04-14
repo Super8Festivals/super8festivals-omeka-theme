@@ -20,17 +20,19 @@ function constructURLTrail($parts, $part)
 }
 
 ?>
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class='breadcrumb-item'><a href='/'>Home</a></li>
-        <?php foreach ($parts = getUrlParts() as $part): ?>
-            <li class="breadcrumb-item">
-                <?php if ($part == end($parts)): ?>
-                    <span class='text-capitalize text-muted'><?= ucwords(urldecode($part)); ?></span>
-                <?php else: ?>
-                    <a href="<?= constructURLTrail($parts, $part); ?>"><?= ucwords(urldecode($part)); ?></a>
-                <?php endif; ?>
-            </li>
-        <?php endforeach; ?>
-    </ol>
-</nav>
+<?php if (count($parts = getUrlParts()) > 0): ?>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class='breadcrumb-item'><a href='/'>Home</a></li>
+            <?php foreach ($parts as $part): ?>
+                <li class="breadcrumb-item">
+                    <?php if ($part == end($parts)): ?>
+                        <span class='text-capitalize text-muted'><?= ucwords(urldecode($part)); ?></span>
+                    <?php else: ?>
+                        <a href="<?= constructURLTrail($parts, $part); ?>"><?= ucwords(urldecode($part)); ?></a>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ol>
+    </nav>
+<?php endif; ?>
