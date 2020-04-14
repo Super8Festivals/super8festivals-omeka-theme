@@ -92,15 +92,15 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
     </div>
 
     <!--Bottom Navigation-->
-    <div class="row">
-        <div class="col">
-            <ul class="row nav nav-fill">
-                <li class="nav-item"><a class="nav-link" href="about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="submit">Submit</a></li>
-            </ul>
-        </div>
-    </div>
+<!--    <div class="row">-->
+<!--        <div class="col">-->
+<!--            <ul class="row nav nav-fill">-->
+<!--                <li class="nav-item"><a class="nav-link" href="about">About</a></li>-->
+<!--                <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>-->
+<!--                <li class="nav-item"><a class="nav-link" href="submit">Submit</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </div>-->
 
 </section>
 
