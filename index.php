@@ -67,7 +67,7 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
             <ul class="nav flex-column text-center">
                 <li class="nav-item"><a class="nav-link" href="history">History</a></li>
                 <li class="nav-item"><a class="nav-link" href="filmmakers">Filmmakers</a></li>
-                <li class="nav-item"><a class="nav-link" href="countries">Countries</a></li>
+                <li class="nav-item"><a class="nav-link" href="cities">Cities</a></li>
             </ul>
         </div>
         <!--World Map-->
@@ -83,7 +83,7 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
                         <span>Click a marker to view information about it</span>
                     </div>
                     <div id="link-box" class="d-flex justify-content-center align-items-center pt-1 pb-1 text-center">
-                        <a href="countries" class="stretched-link">Click here for a full list of countries</a>
+                        <a href="cities" class="stretched-link">Click here for a full list of cities</a>
                     </div>
                 <?php endif; ?>
             </div>
