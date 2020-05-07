@@ -59,13 +59,11 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
         <!--Side Navigation-->
         <div class="col-lg-4 d-flex flex-column px-4">
             <a href="federation">
-                <img src="<?php echo src('FederationLogoFull.png', 'images'); ?>" class="img-fluid" alt="Federation">
+                <img src="<?php echo src('FederationLogoFull.png', 'images'); ?>" class="img-fluid mb-2" alt="Federation">
             </a>
-            <h2 class="mt-3 text-center">
-                Federation
-            </h2>
             <ul class="nav flex-column text-center">
-                <li class="nav-item"><a class="nav-link" href="history">History</a></li>
+                <li class="nav-item"><a class="nav-link" href="federation">Federation</a></li>
+                <li class="nav-item"><a class="nav-link" href="federation#history">History</a></li>
                 <li class="nav-item"><a class="nav-link" href="filmmakers">Filmmakers</a></li>
                 <li class="nav-item"><a class="nav-link" href="cities">Cities</a></li>
             </ul>
