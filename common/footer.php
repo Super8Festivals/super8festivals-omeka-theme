@@ -9,16 +9,16 @@
         <div class="col-6 col-md">
             <h5>About</h5>
             <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Federation</a></li>
-                <li><a class="text-muted" href="#">History</a></li>
-                <li><a class="text-muted" href="#">Filmmakers</a></li>
+                <li><a class="text-muted" href="federation">Federation</a></li>
+                <li><a class="text-muted" href="federation#history">History</a></li>
+                <li><a class="text-muted" href="filmmakers">Filmmakers</a></li>
             </ul>
         </div>
         <div class="col-6 col-md">
             <h5>Contact</h5>
             <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="#">Submit Content</a></li>
-                <li><a class="text-muted" href="#">Email Us</a></li>
+                <li><a class="text-muted" href="submit">Submit Content</a></li>
+                <li><a class="text-muted" href="contact">Email Us</a></li>
             </ul>
         </div>
     </div>
