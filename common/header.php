@@ -55,6 +55,23 @@
     queue_js_url("https://code.jquery.com/jquery-3.4.1.min.js");
     echo head_js();
     ?>
+
+
+    <!-- Google Analytics -->
+    <?php if (!is_localhost()): ?>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171539232-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', 'UA-171539232-1');
+        </script>
+    <?php endif; ?>
+
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
