@@ -23,20 +23,16 @@
 
     <!-- Stylesheets -->
     <?php
-    // -- START BOOTSTRAP --
-    queue_css_url('//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
-    // -- END BOOTSTRAP --
+    queue_css_url("//stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css");
+    queue_css_url("//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css");
 
-    // -- START GOOGLE FONTS --
     queue_css_url('https://fonts.googleapis.com/css?family=Archivo+Black|Roboto|Roboto+Mono&display=swap');
-    // -- END GOOGLE FONTS --
 
     // line awesome provides our icons
     queue_css_file(array('line-awesome.min', 'line-awesome-font-awesome.min'));
 
-    // -- START OPEN LAYERS MAP --
+    // openlayersmap is a free alternative to google maps
     queue_css_url('//cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css');
-    // -- END OPEN LAYERS MAP --
 
     // our stylesheet
     queue_css_file('style');
@@ -88,8 +84,7 @@
                     <div class="col d-flex justify-content-center align-items-center">
                         <h2 class="brand">
                             <a href="/">
-                                <img src="<?php echo src('logo.png', 'images'); ?>" class="img-fluid"
-                                     alt="Super8Festivals" width="600">
+                                <img src="<?php echo src('logo.png', 'images'); ?>" class="img-fluid" alt="Super8Festivals" width="600">
                             </a>
                         </h2>
                     </div>
@@ -99,10 +94,10 @@
                 <div class="row">
                     <div class="col">
                         <!--Search Box-->
-                        <form class="form-group" id="search-form" name="search-form" action="/search" method="get">
+                        <form class="form-group mb-4" id="search-form" name="search-form" action="/search" method="get">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="query">
+                                    <label class="input-group-text h-100 w-100" for="query">
                                         <i class="la la-search"></i>
                                     </label>
                                 </div>

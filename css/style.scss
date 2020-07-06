@@ -1,0 +1,24 @@
+@import "../sass/globals";
+@import "../sass/helpful";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto Mono', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Mono Medium', sans-serif;
+}
+
+#home-section {
+  ul {
+    li {
+      &:hover {
+        background-color: #fafafa;
+      }
+    }
+  }
+}

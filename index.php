@@ -52,24 +52,19 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
         content: "✖";
     }
 </style>
-<section class="container-fluid" id="home-section">
 
-    <!--2 Col Body-->
-    <div class="row no-gutters">
-        <!--Side Navigation-->
-        <div class="col-lg-4 d-flex flex-column px-4">
-            <a href="federation">
-                <img src="<?php echo src('FederationLogoFull.png', 'images'); ?>" class="img-fluid mb-2" alt="Federation">
-            </a>
+<section class="container-fluid mb-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <img src="<?php echo src('FederationLogoFull.png', 'images'); ?>" class="img-fluid mb-2" alt="Federation">
             <ul class="nav flex-column text-center">
-                <li class="nav-item"><a class="nav-link" href="federation">Federation</a></li>
-                <li class="nav-item"><a class="nav-link" href="federation#history">History</a></li>
-                <li class="nav-item"><a class="nav-link" href="filmmakers">Filmmakers</a></li>
-                <li class="nav-item"><a class="nav-link" href="cities">Cities</a></li>
+                <li class="nav-item"><a class="nav-link" href="/federation">Federation</a></li>
+                <li class="nav-item"><a class="nav-link" href="/federation#history">History</a></li>
+                <li class="nav-item"><a class="nav-link" href="/filmmakers">Filmmakers</a></li>
+                <li class="nav-item"><a class="nav-link" href="/cities">Cities</a></li>
             </ul>
         </div>
-        <!--World Map-->
-        <div class="col-lg-8 d-flex justify-content-center align-items-center flex-column" style="height: 70vh;">
+        <div class="col-lg-8 col-md d-none d-md-block" style="height: 70vh;">
             <div id="popup" class="ol-popup d-flex align-items-center">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
                 <div id="popup-content" class="text-capitalize"></div>
@@ -77,29 +72,11 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
             <div id="map" class="w-100 h-100 m-auto">
                 <?php if ($isPluginActive): ?>
                     <?= $this->partial("_partials/open-layers-map.php", array('mapID' => "map")); ?>
-                    <div id="info-box" class="d-flex justify-content-center align-items-center pt-1 pb-1 text-center">
-                        <span>Click a marker to view information about it</span>
-                    </div>
-                    <div id="link-box" class="d-flex justify-content-center align-items-center pt-1 pb-1 text-center">
-                        <a href="cities" class="stretched-link">Click here for a full list of cities</a>
-                    </div>
                 <?php endif; ?>
             </div>
+            <p class="mb-5 bg-dark text-light text-center">The markers on the map above represent notable cities in which Super 8 Festivals were held. Click on a marker to view more information.</p>
         </div>
     </div>
-
-    <!--Bottom Navigation-->
-<!--    <div class="row">-->
-<!--        <div class="col">-->
-<!--            <ul class="row nav nav-fill">-->
-<!--                <li class="nav-item"><a class="nav-link" href="about">About</a></li>-->
-<!--                <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>-->
-<!--                <li class="nav-item"><a class="nav-link" href="submit">Submit</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-
 </section>
-
 
 <?php echo foot(); ?>
