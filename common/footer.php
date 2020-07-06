@@ -8,7 +8,7 @@
                 <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact</h5>
                 <ul class="list-unstyled">
                     <li><a href="/submit">Submit Content</a></li>
-                    <li><a href="/email">Email Us</a></li>
+                    <li><a href="/contact">Email Us</a></li>
                 </ul>
             </div>
             <div class="col text-center order-2 order-md-1 ">
