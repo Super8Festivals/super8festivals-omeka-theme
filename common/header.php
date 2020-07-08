@@ -26,7 +26,7 @@
     queue_css_url("//stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css");
     queue_css_url("//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css");
 
-    queue_css_url('https://fonts.googleapis.com/css?family=Archivo+Black|Roboto|Roboto+Mono&display=swap');
+    queue_css_url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
 
     // line awesome provides our icons
     queue_css_file(array('line-awesome.min', 'line-awesome-font-awesome.min'));
