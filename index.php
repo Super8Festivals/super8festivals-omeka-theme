@@ -73,7 +73,7 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
             ?>
             <ul class="nav flex-column text-center">
                 <?php foreach ($menu_items as $item): ?>
-                    <li class="nav-item"><a class="nav-link" href="/<?= $item['uid']; ?>"><?= $item['label']; ?></a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?= $item['uid']; ?>"><?= $item['label']; ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
