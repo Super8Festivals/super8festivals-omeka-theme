@@ -51,9 +51,19 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
     .ol-popup-closer:after {
         content: "✖";
     }
+
+    #map {
+        min-height: 300px;
+    }
+
+    .ol-layer canvas {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 </style>
 
-<section class="container-fluid">
+<section class="container-fluid mb-5 pb-2">
     <div class="row">
         <div class="col-lg-4">
             <img src="<?php echo src('FederationLogoFull.png', 'images'); ?>" class="img-fluid mb-2" alt="Federation">
@@ -67,17 +77,17 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
                 <?php endforeach; ?>
             </ul>
         </div>
-        <div class="col-lg-8 col-md d-none d-md-block" style="height: 70vh;">
+        <div class="col-lg-8 col-md d-none d-md-block" >
             <div id="popup" class="ol-popup d-flex align-items-center">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
                 <div id="popup-content" class="text-capitalize"></div>
             </div>
-            <div id="map" class="w-100 h-100 m-auto">
+            <p class="bg-dark text-light text-center mb-0">The markers on the map above represent notable cities in which Super 8 Festivals were held. Click on a marker to view more information.</p>
+            <div id="map" class="h-100" style="min-height: 500px;">
                 <?php if ($isPluginActive): ?>
                     <?= $this->partial("_partials/open-layers-map.php", array('mapID' => "map")); ?>
                 <?php endif; ?>
             </div>
-            <p class="mb-5 bg-dark text-light text-center">The markers on the map above represent notable cities in which Super 8 Festivals were held. Click on a marker to view more information.</p>
         </div>
     </div>
 </section>

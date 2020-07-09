@@ -23,6 +23,9 @@
 
     <!-- Stylesheets -->
     <?php
+    // openlayersmap is a free alternative to google maps
+    queue_css_url('//cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css');
+
     queue_css_url("//stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css");
     queue_css_url("//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css");
 
@@ -31,8 +34,6 @@
     // line awesome provides our icons
     queue_css_file(array('line-awesome.min', 'line-awesome-font-awesome.min'));
 
-    // openlayersmap is a free alternative to google maps
-    queue_css_url('//cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css');
 
     // our stylesheet
     queue_css_file('style');
