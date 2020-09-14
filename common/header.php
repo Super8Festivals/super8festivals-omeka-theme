@@ -22,37 +22,23 @@
     <?php fire_plugin_hook('public_head', array('view' => $this)); ?>
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="<?= web_path_to("css/vendor/bootstrap/bootstrap.min.css"); ?>">
+    <link rel="stylesheet" href="<?= web_path_to("css/vendor/openlayersmap/ol.css"); ?>">
+    <link rel="stylesheet" href="<?= web_path_to("css/vendor/jquery-fancybox/jquery.fancybox.css"); ?>">
+    <link rel="stylesheet" href="<?= web_path_to("css/vendor/jquery-fancybox/helpers/jquery.fancybox-buttons.css"); ?>">
+    <link rel="stylesheet" href="<?= web_path_to("css/vendor/jquery-fancybox/helpers/jquery.fancybox-thumbs.css"); ?>">
     <?php
-    // openlayersmap is a free alternative to google maps
-    queue_css_url('//cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.0.1/css/ol.css');
-
-    queue_css_url("//stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css");
-    queue_css_url("//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css");
-
     queue_css_url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
 
     // line awesome provides our icons
     queue_css_file(array('line-awesome.min', 'line-awesome-font-awesome.min'));
 
-
     // our stylesheet
     queue_css_file('style');
 
     echo head_css();
-    ?>
-
-    <!-- JavaScripts -->
-    <?php
-    // -- START BOOTSTRAP --
-    queue_js_url("https://code.jquery.com/jquery-3.3.1.slim.min.js");
-    queue_js_url("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js");
-    queue_js_url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js");
-    // -- END BOOTSTRAP --
-    // jQuery
-    queue_js_url("https://code.jquery.com/jquery-3.4.1.min.js");
     echo head_js();
     ?>
-
 
     <!-- Google Analytics -->
     <?php if (!is_localhost()): ?>

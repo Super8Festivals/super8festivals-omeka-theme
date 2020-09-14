@@ -83,13 +83,11 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
                 <div id="popup-content" class="text-capitalize"></div>
             </div>
             <p class="bg-dark text-light text-center mb-0">The markers on the map above represent notable cities in which Super 8 Festivals were held. Click on a marker to view more information.</p>
-            <div id="map" class="h-100" style="min-height: 500px;">
-                <?php if ($isPluginActive): ?>
-                    <?= $this->partial("_partials/open-layers-map.php", array('mapID' => "map")); ?>
-                <?php endif; ?>
-            </div>
+            <div id="map" class="h-100" style="min-height: 500px;"></div>
         </div>
     </div>
 </section>
+
+<script type="module" src="<?= src("index-map.js", "javascripts"); ?>"></script>
 
 <?php echo foot(); ?>

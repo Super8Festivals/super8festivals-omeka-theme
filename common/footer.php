@@ -37,9 +37,14 @@
 
 <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
 
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="<?= web_path_to("javascripts/vendor/jquery/jquery.min.js"); ?>"></script>
+<script src="<?= web_path_to("javascripts/vendor/fancybox/jquery.fancybox.pack.js"); ?>"></script>
+<script src="<?= web_path_to("javascripts/vendor/fancybox/helpers/jquery.fancybox-buttons.js"); ?>"></script>
+<script src="<?= web_path_to("javascripts/vendor/fancybox/helpers/jquery.fancybox-media.js"); ?>"></script>
+<script src="<?= web_path_to("javascripts/vendor/fancybox/helpers/jquery.fancybox-thumbs.js"); ?>"></script>
+<script src="<?= web_path_to("javascripts/vendor/popper/umd/popper.min.js"); ?>"></script>
+<script src="<?= web_path_to("javascripts/vendor/bootstrap/bootstrap.min.js"); ?>"></script>
+<script src="<?= web_path_to("javascripts/vendor/openlayersmap/ol.js"); ?>"></script>
 
 </body>
 </html>
