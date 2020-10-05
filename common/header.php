@@ -27,11 +27,10 @@
     <link rel="stylesheet" href="<?= web_path_to("css/vendor/jquery-fancybox/jquery.fancybox.css"); ?>">
     <link rel="stylesheet" href="<?= web_path_to("css/vendor/jquery-fancybox/helpers/jquery.fancybox-buttons.css"); ?>">
     <link rel="stylesheet" href="<?= web_path_to("css/vendor/jquery-fancybox/helpers/jquery.fancybox-thumbs.css"); ?>">
+    <link rel="stylesheet" href="<?= web_path_to("css/vendor/line-awesome.min.css"); ?>">
+    <link rel="stylesheet" href="<?= web_path_to("css/vendor/line-awesome-font-awesome.min.css"); ?>">
     <?php
     queue_css_url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
-
-    // line awesome provides our icons
-    queue_css_file(array('line-awesome.min', 'line-awesome-font-awesome.min'));
 
     // our stylesheet
     queue_css_file('style');
@@ -56,10 +55,9 @@
     <?php endif; ?>
 
 </head>
-<?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
-<?php fire_plugin_hook('public_body', array('view' => $this)); ?>
 
-<header role="banner">
+<header>
+    <?php fire_plugin_hook('public_body', array('view' => $this)); ?>
     <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
 
     <!--Page Header-->
@@ -108,12 +106,12 @@
 
 </header>
 
-<!--Make sure plugin is installed-->
-<?php if (!plugin_is_active("SuperEightFestivals")): ?>
-    <div style='position: absolute; top: 41px; z-index; 999; width: 100%; font-size: 1.5em; font-weight: bold; color: red; background-color: #FFFF00AA; display: flex; justify-content: center;'>
-        <p class='mb-0'>WARNING: The Super8Festivals plugin is not enabled/installed!</p>
-    </div>
-<?php endif; ?>
-
 <main>
+    <!--Make sure plugin is installed-->
+    <?php if (!plugin_is_active("SuperEightFestivals")): ?>
+        <div style='position: absolute; top: 41px; z-index; 999; width: 100%; font-size: 1.5em; font-weight: bold; color: red; background-color: #FFFF00AA; display: flex; justify-content: center;'>
+            <p class='mb-0'>WARNING: The Super8Festivals plugin is not enabled/installed!</p>
+        </div>
+    <?php endif; ?>
+
     <?php fire_plugin_hook('public_content_top', array('view' => $this)); ?>
