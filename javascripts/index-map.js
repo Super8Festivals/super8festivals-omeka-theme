@@ -70,7 +70,6 @@ map.on('singleclick', function (e) {
 (async () => {
     const cities = await fetch("/rest-api/cities").then((resp) => resp.json()).then((json) => json.data);
     for (const city of cities) {
-        const country = await fetch(`/rest-api/countries/${city.country_id}`).then((resp) => resp.json()).then((json) => json.data);
         markerLayerSource.addFeature(new ol.Feature({
             geometry: new ol.geom.Point(
                 ol.proj.fromLonLat([
@@ -80,7 +79,7 @@ map.on('singleclick', function (e) {
             ),
             name: city.name,
             id: city.id,
-            country: country.name,
+            country: city.country_name,
         }));
     }
 })();
