@@ -40,20 +40,17 @@
     ?>
 
     <!-- Google Analytics -->
-    <?php if (!is_localhost()): ?>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171539232-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171539232-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-            gtag('js', new Date());
-            gtag('config', 'UA-171539232-1');
-        </script>
-    <?php endif; ?>
-
+        gtag("js", new Date());
+        gtag("config", "UA-171539232-1");
+    </script>
 </head>
 
 <header>
