@@ -73,13 +73,13 @@ map.on('singleclick', function (e) {
         markerLayerSource.addFeature(new ol.Feature({
             geometry: new ol.geom.Point(
                 ol.proj.fromLonLat([
-                    city.longitude,
-                    city.latitude,
+                    city.location.longitude,
+                    city.location.latitude,
                 ]),
             ),
-            name: city.name,
+            name: city.location.name,
             id: city.id,
-            country: city.country_name,
+            country: city.country.location.name,
         }));
     }
 })();
