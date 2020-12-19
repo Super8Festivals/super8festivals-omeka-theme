@@ -6,6 +6,6 @@
   "author": "Michael Gates <michaelgatesdev@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "ol": "^6.4.3",
+    "ol": "^6.4.3"
   }
 }

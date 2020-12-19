@@ -18,25 +18,18 @@
 
     <?php echo auto_discovery_link_tags(); ?>
 
-    <!-- Plugin Stuff -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.2.1/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap"/>
+
     <?php fire_plugin_hook('public_head', array('view' => $this)); ?>
-
-    <!-- Stylesheets -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-
-    <link rel="stylesheet" href="<?= web_path_to("css/vendor/openlayersmap/ol.css"); ?>">
-    <link rel="stylesheet" href="<?= web_path_to("css/vendor/line-awesome.min.css"); ?>">
-    <link rel="stylesheet" href="<?= web_path_to("css/vendor/line-awesome-font-awesome.min.css"); ?>">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" />
 
     <?php
     // our stylesheet
     queue_css_file('style');
 
     echo head_css();
-    echo head_js();
     ?>
 
     <!-- Google Analytics -->
@@ -80,7 +73,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text h-100 w-100" for="query">
-                                        <i class="la la-search"></i>
+                                        <i class="bi bi-search"></i>
                                     </label>
                                 </div>
                                 <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" name="query" id="query">
