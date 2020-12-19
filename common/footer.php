@@ -37,13 +37,11 @@
 
 <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
 
-<script src="<?= web_path_to("javascripts/vendor/jquery/jquery.min.js"); ?>"></script>
-<script src="<?= web_path_to("javascripts/vendor/fancybox/jquery.fancybox.pack.js"); ?>"></script>
-<script src="<?= web_path_to("javascripts/vendor/fancybox/helpers/jquery.fancybox-buttons.js"); ?>"></script>
-<script src="<?= web_path_to("javascripts/vendor/fancybox/helpers/jquery.fancybox-media.js"); ?>"></script>
-<script src="<?= web_path_to("javascripts/vendor/fancybox/helpers/jquery.fancybox-thumbs.js"); ?>"></script>
-<script src="<?= web_path_to("javascripts/vendor/popper/umd/popper.min.js"); ?>"></script>
-<script src="<?= web_path_to("javascripts/vendor/bootstrap/bootstrap.min.js"); ?>"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+
 <script src="<?= web_path_to("javascripts/vendor/openlayersmap/ol.js"); ?>"></script>
 
 </body>

@@ -22,16 +22,16 @@
     <?php fire_plugin_hook('public_head', array('view' => $this)); ?>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="<?= web_path_to("css/vendor/bootstrap/bootstrap.min.css"); ?>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
     <link rel="stylesheet" href="<?= web_path_to("css/vendor/openlayersmap/ol.css"); ?>">
-    <link rel="stylesheet" href="<?= web_path_to("css/vendor/jquery-fancybox/jquery.fancybox.css"); ?>">
-    <link rel="stylesheet" href="<?= web_path_to("css/vendor/jquery-fancybox/helpers/jquery.fancybox-buttons.css"); ?>">
-    <link rel="stylesheet" href="<?= web_path_to("css/vendor/jquery-fancybox/helpers/jquery.fancybox-thumbs.css"); ?>">
     <link rel="stylesheet" href="<?= web_path_to("css/vendor/line-awesome.min.css"); ?>">
     <link rel="stylesheet" href="<?= web_path_to("css/vendor/line-awesome-font-awesome.min.css"); ?>">
-    <?php
-    queue_css_url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap');
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" />
+
+    <?php
     // our stylesheet
     queue_css_file('style');
 
