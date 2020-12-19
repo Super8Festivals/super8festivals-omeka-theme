@@ -6,10 +6,6 @@
   "author": "Michael Gates <michaelgatesdev@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^5.0.0-alpha1",
-    "jquery": "^3.5.1",
-    "jquery.fancybox": "^2.1.5",
     "ol": "^6.4.3",
-    "popper.js": "^1.16.1"
   }
 }
