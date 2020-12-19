@@ -1,4 +1,7 @@
 <?php
+
+queue_css_file("ol", "all", "", "css/vendor/openlayersmap");
+
 echo head(array(
     'title' => 'Home'
 ));
@@ -77,7 +80,7 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
                 <?php endforeach; ?>
             </ul>
         </div>
-        <div class="col-lg-8 col-md d-none d-md-block" >
+        <div class="col-lg-8 col-md d-none d-md-block">
             <div id="popup" class="ol-popup d-flex align-items-center">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
                 <div id="popup-content" class="text-capitalize"></div>
@@ -88,6 +91,8 @@ $isPluginActive = plugin_is_active("SuperEightFestivals");
     </div>
 </section>
 
-<script type="module" src="<?= src("index-map.js", "javascripts"); ?>"></script>
+<script src="<?= web_path_to("javascripts/vendor/openlayersmap/ol.js"); ?>"></script>
+<script src="<?= src("index-map.js", "javascripts"); ?>"></script>
+
 
 <?php echo foot(); ?>
