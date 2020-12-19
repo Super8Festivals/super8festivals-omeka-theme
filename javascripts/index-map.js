@@ -22,6 +22,9 @@ const markerLayer = new ol.layer.Vector({
         image: new ol.style.Icon({
             crossOrigin: 'anonymous',
             scale: 0.5,
+            anchor: [0.5, 50],
+            anchorXUnits: 'fraction',
+            anchorYUnits: 'pixels',
             src: '/themes/SuperEightFestivals/images/marker.png'
         })
     })
