@@ -77,6 +77,9 @@
                                 </label>
                                 <input type="text" class="form-control" placeholder="Search by year, title, description, or name." name="query" id="query">
 
+                                <label class="input-group-text" for="type">
+                                    &nbsp;Search By
+                                </label>
                                 <select class="form-select" style="max-width: 150px;" name="type">
                                     <option value="city">City</option>
                                     <option value="festival">Festival</option>
