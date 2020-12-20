@@ -71,15 +71,23 @@
                         <!--Search Box-->
                         <form class="form-group mb-4" id="search-form" name="search-form" action="/search" method="get">
                             <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text h-100 w-100" for="query">
-                                        <i class="bi bi-search"></i>
-                                    </label>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2" name="query" id="query">
-                                <div class="input-group-append">
-                                    <button id="submit_search" type="submit" class="d-flex justify-content-end btn btn-outline-secondary">Search</button>
-                                </div>
+                                <label class="input-group-text" for="query">
+                                    <i class="bi bi-search"></i>
+                                    &nbsp;Search
+                                </label>
+                                <input type="text" class="form-control" placeholder="Search by year, title, description, or name." name="query" id="query">
+
+                                <select class="form-select" style="max-width: 150px;" name="type">
+                                    <option value="city">City</option>
+                                    <option value="festival">Festival</option>
+                                    <option value="poster">Poster</option>
+                                    <option value="photo">Photo</option>
+                                    <option value="print-media">Print Media</option>
+                                    <option value="film">Film</option>
+                                    <option value="filmmaker">Filmmaker</option>
+                                    <option value="film-catalogs">Film Catalogs</option>
+                                </select>
+                                <button id="submit_search" type="submit" class="btn btn-outline-secondary">Search</button>
                             </div>
                         </form>
                     </div>
