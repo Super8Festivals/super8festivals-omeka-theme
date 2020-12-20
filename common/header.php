@@ -88,7 +88,7 @@
                                     <option value="print-media">Print Media</option>
                                     <option value="film">Film</option>
                                     <option value="filmmaker">Filmmaker</option>
-                                    <option value="film-catalogs">Film Catalogs</option>
+                                    <option value="film-catalog">Film Catalog</option>
                                 </select>
                                 <button id="submit_search" type="submit" class="btn btn-outline-secondary">Search</button>
                             </div>
