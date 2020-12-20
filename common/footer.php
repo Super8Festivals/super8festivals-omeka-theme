@@ -13,7 +13,7 @@
             </div>
             <div class="col text-center order-2 order-md-1 ">
                 <h5 class="font-weight-bold text-uppercase"><img class="mb-2" src="<?php echo src('logo.png', 'images'); ?>" alt="Super8Festivals" height="24"></h5>
-                <a href="/admin">Admin Login</a>
+                <a href="/admin/users/login">Admin Login</a>
 
                 <p class="small my-2">
                     &copy; <?= date("Y"); ?> Copyright
