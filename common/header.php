@@ -51,7 +51,7 @@
     <?php fire_plugin_hook('public_header', array('view' => $this)); ?>
 
     <!--Page Header-->
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <!--Branding-->
@@ -72,7 +72,7 @@
                         <form class="form-group mb-4" id="search-form" name="search-form" action="/search" method="get">
                             <div class="input-group">
                                 <label class="input-group-text" for="query">
-                                    <i class="bi bi-search"></i>
+                                    <i class="bibi-search"></i>
                                     &nbsp;Search
                                 </label>
                                 <input type="text" class="form-control" placeholder="Search by year, title, description, or name." name="query" id="query">
